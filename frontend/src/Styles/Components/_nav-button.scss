@@ -1,0 +1,14 @@
+.nav-button-container {
+  button {
+    background-color: $primary;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    color: $fontColor;
+    font-weight: 700;
+    border-style: none;
+    &:hover {
+      background-color: #123acc;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.button-con {
+  button {
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+  }
+  .primary {
+    background-color: $primary;
+    color: $fontColor;
+  }
+  .secondary {
+    background-color: $darkGray;
+    color: $lightGray;
+  }
+}

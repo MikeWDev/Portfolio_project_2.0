@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #141a2a;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container,
+section {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+nav {
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+}
+nav .logo-container {
+  display: flex;
+  flex-direction: row;
+}
+nav .logo-container .logo-text {
+  color: #fafefa;
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+nav .logo-container .logo-img {
+  height: 100%;
+}
+nav .nav-links {
+  color: #fafefa;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+nav .nav-links ul {
+  display: flex;
+  gap: 4.2rem;
+  justify-content: center;
+}
+nav .nav-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button-container button {
+  background-color: #1649ff;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  color: #fafefa;
+  font-weight: 700;
+  border-style: none;
+}
+.nav-button-container button:hover {
+  background-color: #123acc;
+}
+
+.button-con button {
+  padding: 1.5rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+}
+.button-con .primary {
+  background-color: #1649ff;
+  color: #fafefa;
+}
+.button-con .secondary {
+  background-color: #484554;
+  color: #ada9bb;
+}
+
+.home {
+  margin: 9.6rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+}
+.home::after {
+  content: " ";
+  display: inline-block;
+  height: 50rem;
+  width: 50rem;
+  background-color: #1649ff;
+  filter: blur(110px);
+  z-index: -30;
+  opacity: 60%;
+  border-radius: 50%;
+  position: absolute;
+  right: -280px;
+  top: -280px;
+}
+.home .content-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home .content-con .neonlight-con {
+  height: 100%;
+  width: 15%;
+}
+.home .content-con .neonlight-con .neon-light {
+  display: inline-block;
+  position: relative;
+}
+.home .content-con .neonlight-con .neon-light::after {
+  display: inline-block;
+  content: " ";
+  height: 48.2rem;
+  width: 1.6rem;
+  border-radius: 9px;
+  background-color: #fafefa;
+  box-shadow: inset 0 0 10px #1649ff;
+  z-index: 1;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.home .content-con .neonlight-con .neon-light::before {
+  content: " ";
+  display: inline-block;
+  height: 54.7rem;
+  width: 11.1rem;
+  background-color: #1649ff;
+  filter: blur(72px);
+  z-index: -30;
+  position: absolute;
+}
+.home .content-con .slogans-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.home .content-con .slogans-container .slogans .big-slogans {
+  position: relative;
+}
+.home .content-con .slogans-container .slogans .big-slogans h1 {
+  color: #fafefa;
+  font-size: 8.6rem;
+  font-weight: 800;
+}
+.home .content-con .slogans-container .slogans .big-slogans .cv-download {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(130deg, #1649ff, #e300cb);
+  padding: 2rem 3rem;
+  border-radius: 60%;
+  top: 1px;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.home .content-con .slogans-container .slogans .big-slogans .cv-download::before {
+  content: " ";
+  display: inline-block;
+  background-image: linear-gradient(130deg, #1649ff, #e300cb);
+  height: 130%;
+  width: 130%;
+  position: absolute;
+  z-index: -10000;
+  top: -15px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 60%;
+}
+.home .content-con .slogans-container .slogans .big-slogans .cv-download .third-ellipse {
+  display: inline-block;
+  background-image: linear-gradient(130deg, #1649ff, #e300cb);
+  height: 160%;
+  width: 160%;
+  position: absolute;
+  z-index: -10000;
+  top: -30px;
+  border-radius: 50%;
+  opacity: 40%;
+}
+.home .content-con .slogans-container .slogans .big-slogans .cv-download .text {
+  color: #fafefa;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.home .content-con .slogans-container .sub-heading h2 {
+  font-size: 1.6rem;
+  color: #ada9bb;
+}
+.home .content-con .slogans-container .button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2.3rem;
+}

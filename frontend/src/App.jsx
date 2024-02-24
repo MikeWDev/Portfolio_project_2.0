@@ -1,7 +1,12 @@
+import HeroPage from "./Pages/HeroPage/HeroPage";
 import "./Styles/Css/App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <HeroPage />
+    </>
+  );
 }
 
 export default App;

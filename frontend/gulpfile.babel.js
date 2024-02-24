@@ -9,7 +9,7 @@ function buildStyles() {
 }
 
 function watchTask() {
-  watch(["./src/Styles/app.scss"], buildStyles);
+  watch(["./src/**/*.scss"], buildStyles);
 }
 
 exports.default = series(buildStyles, watchTask);

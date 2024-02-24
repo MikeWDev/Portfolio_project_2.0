@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/register": "^7.23.7",
+    "@phosphor-icons/react": "^2.0.15",
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
     "react": "^18.2.0",
