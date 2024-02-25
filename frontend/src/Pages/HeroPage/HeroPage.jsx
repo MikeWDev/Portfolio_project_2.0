@@ -1,9 +1,9 @@
-import React, { Profiler } from "react";
+import React from "react";
 import Navbar from "../../Components/NavBar";
 import Button from "../../Components/Button";
 import profile from "../../assets/Pages/profile-pic.png";
-import { DownloadSimple } from "@phosphor-icons/react";
 import NeonLight from "../../Components/NeonLight";
+import CvDownload from "./CvDownload";
 
 const HeroPage = () => {
   return (
@@ -21,16 +21,10 @@ const HeroPage = () => {
                   <br />
                   Web Developer
                 </h1>
-                <div className="cv-download">
-                  <div className="text">CV</div>
-                  <div className="svg">
-                    <DownloadSimple size={24} color="#fff" weight="bold" />
-                  </div>
-                  <div className="third-ellipse"></div>
-                </div>
+                <CvDownload />
               </div>
               <div className="sub-heading">
-                <h2>React / Node.js / Mongo DB</h2>
+                <h4>React / Node.js / Mongo DB</h4>
               </div>
             </div>
             <div className="button-container">
