@@ -1,0 +1,38 @@
+.skill-card-con {
+  .skill-name {
+    position: relative;
+    border-radius: 17px; /*1*/
+    border: 2px solid transparent;
+    background: $borderGrad border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    h4 {
+      font-size: 2.4rem;
+      color: $fontColor;
+      padding: 5rem;
+      background-image: $bgGrad;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    .skill-svg {
+      position: absolute;
+      display: inline-block;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      background: $borderGrad border-box;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      top: -25px;
+      left: -25px;
+      .svg {
+        padding: 1rem;
+        background-image: $bgGrad;
+        display: inline-block;
+        border-radius: 8px;
+      }
+    }
+  }
+}

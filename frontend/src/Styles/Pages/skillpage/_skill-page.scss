@@ -1,0 +1,39 @@
+.skill {
+  margin-bottom: 12.8rem;
+  .content-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4.8rem;
+    align-items: center;
+    justify-content: center;
+    .skill-con {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      .skill-heading {
+        h2 {
+          padding: 1rem;
+          padding-left: 0;
+        }
+      }
+      .skill-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 4.8rem;
+      }
+    }
+  }
+  .bar-con {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    .bar-heading {
+      h3 {
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: $fontColor;
+      }
+    }
+  }
+}

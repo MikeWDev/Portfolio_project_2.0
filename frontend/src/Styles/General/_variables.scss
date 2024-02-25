@@ -7,3 +7,11 @@ $lightGray: #ada9bb;
 $darkGray: #484554;
 //gradients
 $priSecGrad: linear-gradient(130deg, $primary, $secondary);
+$bgGrad: linear-gradient(80deg, #2c313f, #141a2a);
+$borderGrad: linear-gradient(
+  130deg,
+  $primary,
+  rgba(227, 0, 204, 0.314),
+  rgba(227, 0, 204, 0.296),
+  $primary
+);
