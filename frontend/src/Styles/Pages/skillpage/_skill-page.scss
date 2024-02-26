@@ -1,5 +1,5 @@
 .skill {
-  margin-bottom: 12.8rem;
+  margin-bottom: 14.8rem;
   .content-con {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -9,11 +9,41 @@
     .skill-con {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 4rem;
+      position: relative;
+      &::after {
+        content: " ";
+        display: inline-block;
+        height: 50rem;
+        width: 50rem;
+        background-color: $primary;
+        filter: blur(110px);
+        z-index: -30;
+        opacity: 60%;
+        border-radius: 50%;
+        position: absolute;
+        top: 205px;
+        right: 79px;
+      }
       .skill-heading {
         h2 {
           padding: 1rem;
           padding-left: 0;
+        }
+        position: relative;
+        &::after {
+          content: " ";
+          display: inline-block;
+          height: 50rem;
+          width: 50rem;
+          background-color: $secondary;
+          filter: blur(110px);
+          z-index: -30;
+          opacity: 60%;
+          border-radius: 50%;
+          position: absolute;
+          top: -178px;
+          right: 191px;
         }
       }
       .skill-cards {
