@@ -1,0 +1,31 @@
+.neonlight-con {
+  height: 100%;
+  width: 15%;
+  .neon-light {
+    display: inline-block;
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: " ";
+      height: 48.2rem;
+      width: 1.6rem;
+      border-radius: 9px;
+      background-color: $fontColor;
+      box-shadow: inset 0 0 10px $primary;
+      z-index: 1;
+      position: absolute;
+      left: 40px;
+      top: 40px;
+    }
+    &::before {
+      content: " ";
+      display: inline-block;
+      height: 54.7rem;
+      width: 11.1rem;
+      background-color: $primary;
+      filter: blur(72px);
+      z-index: -30;
+      position: absolute;
+    }
+  }
+}

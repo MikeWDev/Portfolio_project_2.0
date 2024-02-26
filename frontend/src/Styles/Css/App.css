@@ -113,11 +113,13 @@ nav .nav-button-container {
   grid-template-columns: 1fr 1fr;
   column-gap: 6.4rem;
   align-items: center;
+  position: relative;
 }
 .project-card .info-con {
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
+  position: relative;
 }
 .project-card .info {
   display: flex;
@@ -157,6 +159,38 @@ nav .nav-button-container {
   gap: 2.4rem;
 }
 
+.neonlight-con {
+  height: 100%;
+  width: 15%;
+}
+.neonlight-con .neon-light {
+  display: inline-block;
+  position: relative;
+}
+.neonlight-con .neon-light::after {
+  display: inline-block;
+  content: " ";
+  height: 48.2rem;
+  width: 1.6rem;
+  border-radius: 9px;
+  background-color: #fafefa;
+  box-shadow: inset 0 0 10px #1649ff;
+  z-index: 1;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.neonlight-con .neon-light::before {
+  content: " ";
+  display: inline-block;
+  height: 54.7rem;
+  width: 11.1rem;
+  background-color: #1649ff;
+  filter: blur(72px);
+  z-index: -30;
+  position: absolute;
+}
+
 .home {
   margin-top: 9.6rem;
   margin-bottom: 12.8rem;
@@ -183,37 +217,6 @@ nav .nav-button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.home .content-con .neonlight-con {
-  height: 100%;
-  width: 15%;
-}
-.home .content-con .neonlight-con .neon-light {
-  display: inline-block;
-  position: relative;
-}
-.home .content-con .neonlight-con .neon-light::after {
-  display: inline-block;
-  content: " ";
-  height: 48.2rem;
-  width: 1.6rem;
-  border-radius: 9px;
-  background-color: #fafefa;
-  box-shadow: inset 0 0 10px #1649ff;
-  z-index: 1;
-  position: absolute;
-  left: 40px;
-  top: 40px;
-}
-.home .content-con .neonlight-con .neon-light::before {
-  content: " ";
-  display: inline-block;
-  height: 54.7rem;
-  width: 11.1rem;
-  background-color: #1649ff;
-  filter: blur(72px);
-  z-index: -30;
-  position: absolute;
 }
 .home .content-con .slogans-container {
   display: flex;
@@ -464,6 +467,38 @@ nav .nav-button-container {
   border-radius: 7px;
 }
 
+.portfolio {
+  position: relative;
+  margin: 12.6rem;
+}
+.portfolio::after {
+  content: " ";
+  display: inline-block;
+  height: 50rem;
+  width: 50rem;
+  background-color: #e300cb;
+  filter: blur(210px);
+  z-index: -30;
+  opacity: 60%;
+  border-radius: 50%;
+  position: absolute;
+  left: -227px;
+  top: -14px;
+}
+.portfolio::before {
+  content: " ";
+  display: inline-block;
+  height: 50rem;
+  width: 50rem;
+  background-color: #1649ff;
+  filter: blur(210px);
+  z-index: -30;
+  opacity: 60%;
+  border-radius: 50%;
+  position: absolute;
+  right: -227px;
+  bottom: -180px;
+}
 .portfolio .content-con {
   display: flex;
   flex-direction: column;
@@ -485,4 +520,95 @@ nav .nav-button-container {
   display: flex;
   flex-direction: column;
   gap: 8.6rem;
+}
+
+.contact-con {
+  margin-bottom: 12.6rem;
+}
+.contact-con .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+.contact-con .contact .content-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12.6rem;
+}
+.contact-con .contact .content-con .info-con {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+.contact-con .contact .content-con .info-con .header-con {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.contact-con .contact .content-con .info-con .header-con .heading h3 {
+  color: #fafefa;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.contact-con .contact .content-con .info-con .header-con .sub-heading span {
+  color: #1649ff;
+}
+.contact-con .contact .content-con .info-con .socials-con {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.form-con form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.form-con form .form-input {
+  display: flex;
+  flex-direction: column;
+}
+.form-con form .form-input label {
+  font-size: 1.6rem;
+  color: #ada9bb;
+}
+.form-con form .form-input input[type=text],
+.form-con form .form-input input[type=email] {
+  height: 3.6rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #1649ff;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  font-family: inherit;
+  background-color: #fafefa;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+.form-con form .form-input textarea {
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #1649ff;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #fafefa;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 4.6rem;
+}
+.social .social-icon {
+  padding: 1rem;
+  background-color: #1649ff;
+  border-radius: 8px;
+}
+.social .social-info {
+  display: flex;
+  align-self: center;
+}
+.social .social-info p {
+  color: #fafefa;
 }

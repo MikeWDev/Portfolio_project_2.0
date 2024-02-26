@@ -7,10 +7,14 @@
 @import "./Components/nav-button";
 @import "./Components/button";
 @import "./Components/project-card";
+@import "./Components/neon-light";
 //pages
-@import "./Pages/hero-page.scss";
-@import "./Pages/about-page.scss";
-@import "./Pages/skillpage/skill-page";
-@import "./Pages/skillpage/skill-card";
-@import "./Pages/skillpage/skill-bar";
-@import "./Pages/portfolio-page/portfolio-page";
+@import "./Pages/HeroPage/hero-page";
+@import "./Pages/AboutPage/about-page";
+@import "./Pages/Skillpage/skill-page";
+@import "./Pages/Skillpage/skill-card";
+@import "./Pages/Skillpage/skill-bar";
+@import "./Pages/Portfolio-page/portfolio-page";
+@import "./Pages/ContactPage/contact-page";
+@import "./Pages/ContactPage/contact-form";
+@import "./Pages/ContactPage/social-element";

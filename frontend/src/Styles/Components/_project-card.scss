@@ -3,16 +3,19 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 6.4rem;
   align-items: center;
+  position: relative;
 
   .info-con {
     display: flex;
     flex-direction: column;
     gap: 3.6rem;
+    position: relative;
   }
   .info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     .header-con {
       display: flex;
       width: 100%;

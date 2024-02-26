@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../../Components/ProjectCard";
+import Button from "../../Components/Button";
 
 const PortfolioPage = () => {
   return (
@@ -18,8 +19,9 @@ const PortfolioPage = () => {
           </div>
           <div className="project-con">
             <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+          </div>
+          <div className="button-con">
+            <Button text="Check all projects" class="primary" />
           </div>
         </div>
       </div>
