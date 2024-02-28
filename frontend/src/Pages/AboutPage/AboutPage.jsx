@@ -3,7 +3,7 @@ import profileAbout from "../../assets/Pages/profileAbout.png";
 const AboutPage = () => {
   return (
     <section>
-      <div className="about">
+      <div id="about" className="about">
         <div className="content-con">
           <div className="image-con">
             <img src={profileAbout} alt="" />

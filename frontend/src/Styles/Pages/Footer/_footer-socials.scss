@@ -1,0 +1,24 @@
+footer {
+  .logo-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.6rem;
+    .logo {
+      img {
+        height: 16rem;
+        width: auto;
+      }
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      .social {
+        padding: 1rem;
+        border-radius: 50%;
+        background-image: $priSecGrad;
+      }
+    }
+  }
+}

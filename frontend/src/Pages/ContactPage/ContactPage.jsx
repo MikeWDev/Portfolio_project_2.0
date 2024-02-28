@@ -6,8 +6,8 @@ import NeonLight from "../../Components/NeonLight";
 const ContactPage = () => {
   return (
     <section>
-      <div className="contact-con">
-        {/* <NeonLight /> */}
+      <div id="contact" className="contact-con">
+        <NeonLight />
 
         <div className="contact">
           <div className="main-heading">

@@ -1,0 +1,60 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2.4rem;
+  margin: 12.6rem 0;
+  .slogan-con {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+
+    .heading-con {
+      font-size: 3.2rem;
+      color: $fontColor;
+    }
+    .desc-con {
+      p {
+        line-height: 34px;
+        padding-right: 2rem;
+      }
+    }
+  }
+  .nav-con {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+
+    .heading-con {
+      font-size: 3.2rem;
+      color: $fontColor;
+    }
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        li {
+          font-size: 2rem;
+          color: $lightGray;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.cp-rg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  p {
+    font-size: 1.2rem;
+    color: $lightGray;
+  }
+}
+hr {
+  height: 1px;
+
+  background-image: $priSecGrad;
+  border: none;
+}

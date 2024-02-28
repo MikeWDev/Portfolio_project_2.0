@@ -48,10 +48,13 @@ nav {
   height: 9rem;
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 nav .logo-container {
   display: flex;
   flex-direction: row;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 nav .logo-container .logo-text {
   color: #fafefa;
@@ -65,7 +68,7 @@ nav .logo-container .logo-img {
 nav .nav-links {
   color: #fafefa;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
@@ -74,6 +77,47 @@ nav .nav-links ul {
   gap: 4.2rem;
   justify-content: center;
 }
+nav .nav-links ul li {
+  position: relative;
+}
+nav .nav-links ul li:hover {
+  opacity: 1;
+}
+nav .nav-links ul li::before {
+  transition: 500ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #fafefa;
+  box-shadow: inset 0 0 3px #1649ff;
+  border-radius: 7px;
+  width: 0%;
+  top: 30px;
+}
+nav .nav-links ul li:hover::before, nav .nav-links ul li:active::before {
+  width: 100%;
+}
+nav .nav-links ul li a {
+  position: relative;
+}
+nav .nav-links ul li a:hover {
+  opacity: 1;
+}
+nav .nav-links ul li a::before {
+  transition: 500ms;
+  height: 12px;
+  content: "";
+  position: absolute;
+  background-color: #1649ff;
+  z-index: -1;
+  filter: blur(10px);
+  border-radius: 7px;
+  width: 0%;
+  top: 25px;
+}
+nav .nav-links ul li a:hover::before, nav .nav-links ul li a:active::before {
+  width: 105%;
+}
 nav .nav-button-container {
   display: flex;
   align-items: center;
@@ -81,23 +125,36 @@ nav .nav-button-container {
 
 .nav-button-container button {
   background-color: #1649ff;
+  cursor: pointer;
   padding: 1rem;
   border-radius: 8px;
   font-size: 2rem;
   color: #fafefa;
-  font-weight: 700;
+  font-weight: 600;
   border-style: none;
+  font-family: inherit;
+  transition: 600ms;
 }
-.nav-button-container button:hover {
-  background-color: #123acc;
+.nav-button-container button:hover, .nav-button-container button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em linear-gradient(130deg, #1649ff, #e300cb);
+  transform: translateY(-0.25em);
 }
 
 .button-con button {
+  cursor: pointer;
   padding: 1.5rem;
   font-size: 2rem;
   border-radius: 8px;
   border: none;
   font-weight: 700;
+  font-family: inherit;
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+}
+.button-con button:hover {
+  box-shadow: 0 0 10px #1649ff, 0 0 40px #1649ff;
+  transition-delay: 1s;
 }
 .button-con .primary {
   background-color: #1649ff;
@@ -105,7 +162,7 @@ nav .nav-button-container {
 }
 .button-con .secondary {
   background-color: #484554;
-  color: #ada9bb;
+  color: #fafefa;
 }
 
 .project-card {
@@ -193,7 +250,7 @@ nav .nav-button-container {
 
 .home {
   margin-top: 9.6rem;
-  margin-bottom: 12.8rem;
+  margin-bottom: 25.6rem;
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -283,7 +340,7 @@ nav .nav-button-container {
 }
 
 .about {
-  margin-bottom: 12.8rem;
+  margin-bottom: 25.6rem;
 }
 .about .content-con {
   display: flex;
@@ -329,7 +386,7 @@ nav .nav-button-container {
 }
 
 .skill {
-  margin-bottom: 14.8rem;
+  margin-bottom: 25.6rem;
 }
 .skill .content-con {
   display: grid;
@@ -469,7 +526,7 @@ nav .nav-button-container {
 
 .portfolio {
   position: relative;
-  margin: 12.6rem;
+  margin-bottom: 25.6rem;
 }
 .portfolio::after {
   content: " ";
@@ -523,7 +580,7 @@ nav .nav-button-container {
 }
 
 .contact-con {
-  margin-bottom: 12.6rem;
+  margin-bottom: 25.6rem;
 }
 .contact-con .contact {
   display: flex;
@@ -564,6 +621,21 @@ nav .nav-button-container {
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
+  position: relative;
+}
+.form-con form::after {
+  content: " ";
+  display: inline-block;
+  height: 50rem;
+  width: 50rem;
+  background-color: #e300cb;
+  filter: blur(170px);
+  z-index: -30;
+  opacity: 60%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  right: -250px;
 }
 .form-con form .form-input {
   display: flex;
@@ -572,6 +644,7 @@ nav .nav-button-container {
 .form-con form .form-input label {
   font-size: 1.6rem;
   color: #ada9bb;
+  font-weight: 600;
 }
 .form-con form .form-input input[type=text],
 .form-con form .form-input input[type=email] {
@@ -611,4 +684,153 @@ nav .nav-button-container {
 }
 .social .social-info p {
   color: #fafefa;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2.4rem;
+  margin: 12.6rem 0;
+}
+footer .slogan-con {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+footer .slogan-con .heading-con {
+  font-size: 3.2rem;
+  color: #fafefa;
+}
+footer .slogan-con .desc-con p {
+  line-height: 34px;
+  padding-right: 2rem;
+}
+footer .nav-con {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+footer .nav-con .heading-con {
+  font-size: 3.2rem;
+  color: #fafefa;
+}
+footer .nav-con nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+footer .nav-con nav ul li {
+  font-size: 2rem;
+  color: #ada9bb;
+  font-weight: 600;
+}
+
+.cp-rg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+.cp-rg p {
+  font-size: 1.2rem;
+  color: #ada9bb;
+}
+
+hr {
+  height: 1px;
+  background-image: linear-gradient(130deg, #1649ff, #e300cb);
+  border: none;
+}
+
+footer .logo-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.6rem;
+}
+footer .logo-con .logo img {
+  height: 16rem;
+  width: auto;
+}
+footer .logo-con .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+footer .logo-con .socials .social {
+  padding: 1rem;
+  border-radius: 50%;
+  background-image: linear-gradient(130deg, #1649ff, #e300cb);
+}
+
+.button-con a span {
+  position: absolute;
+  display: block;
+}
+.button-con a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, white);
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px #1649ff;
+}
+.button-con a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+.button-con a span {
+  position: absolute;
+  display: block;
+}
+.button-con a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, white);
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px #1649ff;
+}
+.button-con a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.button-con a span {
+  position: absolute;
+  display: block;
+}
+.button-con a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fafefa);
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px #1649ff;
+}
+.button-con a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.button-con a span {
+  position: absolute;
+  display: block;
+}
+.button-con a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fafefa);
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px #1649ff;
+}
+.button-con a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }

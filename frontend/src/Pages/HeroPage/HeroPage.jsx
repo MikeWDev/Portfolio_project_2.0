@@ -9,7 +9,7 @@ const HeroPage = () => {
   return (
     <section>
       <Navbar />
-      <div className="home">
+      <div id="home" className="home">
         <div className="content-con">
           <NeonLight />
           <div className="slogans-container">

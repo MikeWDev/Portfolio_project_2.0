@@ -1,12 +1,40 @@
 import AboutPage from "./Pages/AboutPage/AboutPage";
-import ContactForm from "./Pages/ContactPage/ContactForm";
 import ContactPage from "./Pages/ContactPage/ContactPage";
+import Footer from "./Pages/Footer/Footer";
 import HeroPage from "./Pages/HeroPage/HeroPage";
 import PortfolioPage from "./Pages/PortfolioPage/PortfolioPage";
 import SkillPage from "./Pages/SkillPage/SkillPage";
 import "./Styles/Css/App.css";
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 function App() {
+  useEffect(() => {
+    const registerAnimations = () => {
+      const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "50px",
+        duration: 1000,
+        reset: false,
+      });
+      sr.reveal(
+        `
+      nav,
+      .home,
+      .about,
+      .skill,
+      .portfolio,
+      .contact-con,
+      
+      footer
+  `,
+        {
+          interval: 500,
+        }
+      );
+    };
+    registerAnimations();
+  }, []);
   return (
     <>
       <HeroPage />
@@ -14,6 +42,7 @@ function App() {
       <SkillPage />
       <PortfolioPage />
       <ContactPage />
+      <Footer />
     </>
   );
 }

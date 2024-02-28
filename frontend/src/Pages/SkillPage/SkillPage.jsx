@@ -7,7 +7,7 @@ import SkillBar from "./SkillBar";
 const SkillPage = () => {
   return (
     <section>
-      <div className="skill">
+      <div id="skill" className="skill">
         <div className="content-con">
           <div className="skill-con">
             <div className="skill-heading">

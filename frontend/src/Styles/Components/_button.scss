@@ -1,10 +1,19 @@
 .button-con {
   button {
+    cursor: pointer;
     padding: 1.5rem;
     font-size: 2rem;
     border-radius: 8px;
     border: none;
     font-weight: 700;
+    font-family: inherit;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      box-shadow: 0 0 10px $primary, 0 0 40px $primary;
+      transition-delay: 1s;
+    }
   }
   .primary {
     background-color: $primary;
@@ -12,6 +21,6 @@
   }
   .secondary {
     background-color: $darkGray;
-    color: $lightGray;
+    color: $fontColor;
   }
 }
