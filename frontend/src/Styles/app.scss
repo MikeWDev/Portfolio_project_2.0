@@ -2,9 +2,9 @@
 @import "./General/variables";
 //Base
 @import "./General/base";
+@import "./General/sticky-nav";
 //componets
 @import "./Components/navbar.scss";
-@import "./Components/nav-button";
 @import "./Components/button";
 @import "./Components/project-card";
 @import "./Components/neon-light";

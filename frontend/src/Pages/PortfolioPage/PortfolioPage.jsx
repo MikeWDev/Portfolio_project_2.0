@@ -5,7 +5,7 @@ import Button from "../../Components/Button";
 const PortfolioPage = () => {
   return (
     <section>
-      <div className="portfolio">
+      <div id="portfolio" className="portfolio">
         <div className="content-con">
           <div className="header-container">
             <div className="heading">

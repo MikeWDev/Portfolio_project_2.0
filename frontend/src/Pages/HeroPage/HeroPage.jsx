@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "../../Components/NavBar";
 import Button from "../../Components/Button";
 import profile from "../../assets/Pages/profile-pic.png";
 import NeonLight from "../../Components/NeonLight";
 import CvDownload from "./CvDownload";
-
+import UseIntersecting from "../../Hooks/useIntersecting";
 const HeroPage = () => {
+  const { homePadding } = UseIntersecting();
   return (
     <section>
-      <Navbar />
-      <div id="home" className="home">
+      <div id="home" className={`home ${homePadding}`}>
         <div className="content-con">
           <NeonLight />
           <div className="slogans-container">

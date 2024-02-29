@@ -1,0 +1,17 @@
+.sticky-nav {
+  position: fixed;
+  top: -100%;
+  transition: ease-in-out 800ms;
+  z-index: 100;
+}
+.home-padding {
+  padding-top: 9rem;
+}
+.sticky-nav-slide {
+  top: 0;
+}
+.nav-style {
+  background: rgba(20, 26, 42, 0.25);
+
+  backdrop-filter: blur(12px);
+}
