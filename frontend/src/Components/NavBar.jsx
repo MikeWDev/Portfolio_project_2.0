@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../assets/Components/KDev-logo 1.png";
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import UseIntersecting from "../Hooks/useIntersecting";
 const Navbar = () => {
   const { stickyNav, navStyle } = UseIntersecting();
   return (
-    <div className={`nav-bar ${navStyle} ${stickyNav} `}>
+    <div id="nav" className={`nav-bar ${navStyle} ${stickyNav} `}>
       <div className={`container `}>
         <nav>
           <div className="logo-container">
@@ -21,23 +22,26 @@ const Navbar = () => {
             <ul>
               <li>
                 <Link to="home" offset={-1000} smooth={true} duration={1500}>
-                  <a href="">Home</a>
+                  Home
                 </Link>
               </li>
               <li>
                 <Link to="about" offset={-80} smooth={true} duration={1500}>
-                  <a href="">About me</a>
+                  About me
                 </Link>
               </li>
               <li>
                 <Link to="skill" offset={-200} smooth={true} duration={1500}>
-                  <a href="">Skills</a>
+                  Skills
                 </Link>
               </li>
               <li>
-                <Link to="portfolio" smooth={true} duration={1500}>
-                  <a href="">Portfolio</a>
-                </Link>
+                <NavLink
+                  to="/all-projects"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Portfolio
+                </NavLink>
               </li>
             </ul>
           </div>

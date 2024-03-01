@@ -866,12 +866,24 @@ footer .logo-con .socials .social {
   align-items: center;
 }
 .all-projects .heading-con .button-con button {
-  padding: 0.6rem;
+  padding: 1rem;
 }
 .all-projects .project-con {
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
+}
+.all-projects .button-con .all-p {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  border-radius: 20px;
+  transform: scale(0);
+  transition: 200ms ease-in-out;
+  padding: 1rem !important;
+}
+.all-projects .button-con .show {
+  transform: scale(1.1);
 }
 
 .ani-grad {

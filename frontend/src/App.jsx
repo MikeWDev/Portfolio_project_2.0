@@ -1,51 +1,23 @@
-import Navbar from "./Components/NavBar";
-import AboutPage from "./Pages/AboutPage/AboutPage";
-import AllProjects from "./Pages/AllProjects/AllProjects";
-import ContactPage from "./Pages/ContactPage/ContactPage";
+import AllProjects from "./Pages/AllProjects";
 import Footer from "./Pages/Footer/Footer";
-import HeroPage from "./Pages/HeroPage/HeroPage";
-import PortfolioPage from "./Pages/PortfolioPage/PortfolioPage";
-import SkillPage from "./Pages/SkillPage/SkillPage";
+import MainPage from "./Pages/MainPage";
 import "./Styles/Css/App.css";
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-  // useEffect(() => {
-  //   const registerAnimations = () => {
-  //     const sr = ScrollReveal({
-  //       origin: "bottom",
-  //       distance: "50px",
-  //       duration: 1000,
-  //       reset: false,
-  //     });
-  //     sr.reveal(
-  //       `
-
-  //     .home,
-  //     .about,
-  //     .skill,
-  //     .portfolio,
-  //     .contact-con,
-
-  //     footer
-  // `,
-  //       {
-  //         interval: 500,
-  //       }
-  //     );
-  //   };
-  //   registerAnimations();
-  // }, []);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainPage />,
+    },
+    {
+      path: "all-projects",
+      element: <AllProjects />,
+    },
+  ]);
   return (
     <>
-      {/* <Navbar /> */}
-      <AllProjects />
-      {/* <HeroPage />
-      <AboutPage />
-      <SkillPage />
-      <PortfolioPage />
-      <ContactPage /> */}
+      <RouterProvider router={router} />
       <Footer />
     </>
   );

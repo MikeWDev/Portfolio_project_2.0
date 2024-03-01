@@ -4,6 +4,7 @@ import profile from "../../assets/Pages/profile-pic.png";
 import NeonLight from "../../Components/NeonLight";
 import CvDownload from "./CvDownload";
 import UseIntersecting from "../../Hooks/useIntersecting";
+import { NavLink } from "react-router-dom";
 const HeroPage = () => {
   const { homePadding } = UseIntersecting();
   return (
@@ -27,7 +28,9 @@ const HeroPage = () => {
               </div>
             </div>
             <div className="button-container">
-              <Button class="primary" text="See my work" />
+              <NavLink to="/all-projects">
+                <Button class="primary" text="See my work" />
+              </NavLink>
               <Button class="secondary" text="Learn more" />
             </div>
           </div>

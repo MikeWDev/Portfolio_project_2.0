@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "../../Components/ProjectCard";
 import Button from "../../Components/Button";
-
+import { NavLink } from "react-router-dom";
 const PortfolioPage = () => {
   return (
     <section>
@@ -21,7 +21,9 @@ const PortfolioPage = () => {
             <ProjectCard />
           </div>
           <div className="button-con">
-            <Button text="Check all projects" class="primary" />
+            <NavLink to="/all-projects">
+              <Button text="Check all projects" class="primary" />
+            </NavLink>
           </div>
         </div>
       </div>

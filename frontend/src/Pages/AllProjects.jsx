@@ -1,18 +1,22 @@
 import React from "react";
-import ProjectCard from "../../Components/ProjectCard";
-import { ArrowBendUpLeft } from "@phosphor-icons/react";
-import Button from "../../Components/Button";
+import ProjectCard from "../Components/ProjectCard";
+import { ArrowBendUpLeft, ArrowUp } from "@phosphor-icons/react";
+import Button from "../Components/Button";
+import { NavLink } from "react-router-dom";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const AllProjects = () => {
   return (
-    <div className="ani-grad">
+    <div id="all-p" className="ani-grad">
       <section className="">
         <div className="all-projects">
           <div className="heading-con">
-            <Button
-              class="primary"
-              text={<ArrowBendUpLeft size={38} color="#fff" />}
-            />
+            <NavLink to="/">
+              <Button
+                class="primary"
+                text={<ArrowBendUpLeft size={38} color="#fff" />}
+              />
+            </NavLink>
             <div>
               <h2>All Projects</h2>
             </div>
@@ -24,6 +28,7 @@ const AllProjects = () => {
             <ProjectCard />
             <ProjectCard />
           </div>
+          <ScrollToTop />
         </div>
       </section>
     </div>
