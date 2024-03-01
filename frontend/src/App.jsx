@@ -1,5 +1,6 @@
 import Navbar from "./Components/NavBar";
 import AboutPage from "./Pages/AboutPage/AboutPage";
+import AllProjects from "./Pages/AllProjects/AllProjects";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import Footer from "./Pages/Footer/Footer";
 import HeroPage from "./Pages/HeroPage/HeroPage";
@@ -38,12 +39,13 @@ function App() {
   // }, []);
   return (
     <>
-      <Navbar />
-      <HeroPage />
+      {/* <Navbar /> */}
+      <AllProjects />
+      {/* <HeroPage />
       <AboutPage />
       <SkillPage />
       <PortfolioPage />
-      <ContactPage />
+      <ContactPage /> */}
       <Footer />
     </>
   );
