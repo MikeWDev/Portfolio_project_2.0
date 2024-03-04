@@ -1,0 +1,61 @@
+@mixin neonAniGrad() {
+  background: linear-gradient(
+    180deg,
+    #1649ff,
+    #1648ff84,
+    #1648ff01,
+    #1649ff,
+    #1648ff84,
+    #1648ff01,
+    #1649ff,
+    #1648ff84,
+    #1648ff01,
+    #1649ff,
+    #1648ff84,
+    #1648ff01,
+    #1649ff,
+    #1648ff84,
+    #1648ff01,
+    #1649ff,
+    #1648ff84,
+    #1648ff01
+  );
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 51% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 51% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 51% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+//Colors
+$bgColor: #1d263b;
+$secondaryBg: #141a2a;
+$primary: #1649ff;
+$secondary: #e300cb;
+$fontColor: #fafefa;
+$lightGray: #ada9bb;
+$darkGray: #484554;
+
+//gradients
+$priSecGrad: linear-gradient(130deg, $primary, $secondary);
+$bgGrad: linear-gradient(80deg, #2c313f, #141a2a);
+$borderGrad: linear-gradient(
+  130deg,
+  $primary,
+  rgba(227, 0, 204, 0.314),
+  rgba(227, 0, 204, 0.296),
+  $primary
+);
+$hoverGrad: linear-gradient(
+  130deg,
+  rgb(110, 125, 245),
+  rgb(227, 0, 204),
+  rgb(227, 0, 204),
+  rgb(110, 125, 245)
+);
