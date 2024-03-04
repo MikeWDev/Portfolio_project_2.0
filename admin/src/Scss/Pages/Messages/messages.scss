@@ -1,0 +1,16 @@
+@use "../../General/" as g;
+.messages-con {
+  padding: 2rem;
+  .heading {
+    h2 {
+      color: g.$fontColor;
+      font-size: 4.6rem;
+    }
+  }
+  .messages-con {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    height: 100vh;
+  }
+}

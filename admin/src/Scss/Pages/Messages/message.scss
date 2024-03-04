@@ -1,0 +1,40 @@
+@use "../../General/" as g;
+.message-con {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  border: solid 1px g.$darkGray;
+  .name-con {
+    display: flex;
+    justify-content: space-between;
+    .menage-icons {
+      display: flex;
+      gap: 1rem;
+      .svg {
+        padding: 0.8rem;
+        border: solid 1px g.$darkGray;
+        border-radius: 8px;
+        transition: 200ms ease-in-out;
+        &:hover {
+          background-color: g.$primary;
+          cursor: pointer;
+        }
+      }
+    }
+    .name {
+      font-size: 2.6rem;
+      color: g.$fontColor;
+    }
+  }
+  .email {
+    font-size: 2.4rem;
+
+    color: g.$lightGray;
+  }
+  .message {
+    font-size: 2rem;
+    color: g.$lightGray;
+    line-height: 30px;
+  }
+}
