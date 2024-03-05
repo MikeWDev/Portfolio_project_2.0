@@ -2,8 +2,11 @@
 @use "./Pages/AdminPanel/admin-panel.scss";
 @use "./Pages/MainPanel/main-panel.scss";
 @use "./Pages/Messages/messages.scss";
+@use "./Pages/AddProjectPanel/add-project-panel.scss";
 //componets
 @use "./Pages/Aside/Aside.scss";
 @use "./Components/action-button.scss";
+@use "./Components/button";
 @use "./Pages/MainPanel/info-box.scss";
 @use "./Pages/Messages/message.scss";
+@use "./General/utilities";

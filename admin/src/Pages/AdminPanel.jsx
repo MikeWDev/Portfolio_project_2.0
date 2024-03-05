@@ -1,7 +1,12 @@
 import React from "react";
 import Aside from "./Aside/Aside";
 import MainPanel from "./MainPanel/MainPanel";
-
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 const AdminPanel = () => {
   return (
     <>

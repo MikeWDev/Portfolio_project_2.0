@@ -1,0 +1,13 @@
+@use "../General/" as g;
+.button-con {
+  button {
+    padding: 1.6rem 3.6rem;
+    background-color: g.$primary;
+    color: g.$fontColor;
+    font-weight: 700;
+    font-size: 2rem;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+}

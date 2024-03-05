@@ -1,12 +1,11 @@
 import React from "react";
-import DashBoard from "../Dashboard/DashBoard";
-import Messages from "../Messages/Messages";
+
+import { Outlet } from "react-router-dom";
 
 const MainPanel = () => {
   return (
     <div className="main-panel">
-      {/* <DashBoard /> */}
-      <Messages />
+      <Outlet />
     </div>
   );
 };
