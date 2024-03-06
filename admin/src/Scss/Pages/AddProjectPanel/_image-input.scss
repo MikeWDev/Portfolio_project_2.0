@@ -1,1 +1,49 @@
 @use "../../General/" as g;
+
+.image-input {
+  text-align: center;
+  border: 3px dashed rgb(210, 227, 244);
+  padding: 3.6rem;
+  position: relative;
+  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .img-field {
+    position: relative;
+
+    &:hover {
+      span {
+        display: block;
+      }
+    }
+    span {
+      padding: 1.6rem 3.6rem;
+      background-color: g.$lightGray;
+      color: g.$darkGray;
+      font-weight: 700;
+      font-size: 2rem;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      display: none;
+    }
+  }
+}
