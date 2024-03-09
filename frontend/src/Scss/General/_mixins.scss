@@ -1,0 +1,68 @@
+@mixin elipse($color) {
+  content: " ";
+  height: 50rem;
+  width: 50rem;
+  background-color: $color;
+  filter: blur(150px);
+  z-index: -100000;
+  opacity: 60%;
+  border-radius: 50%;
+  position: absolute;
+}
+@mixin glassEffect() {
+  background: rgba(20, 26, 42, 0.25);
+  backdrop-filter: blur(12px);
+}
+@mixin animatedHoverGrad() {
+  background: linear-gradient(
+    80deg,
+    #141a2a,
+    #2c313f,
+    #141a2a,
+    #2c313f,
+    #141a2a,
+    #2c313f,
+    #2c313f,
+    #141a2a,
+    #2c313f
+  );
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 16s ease infinite;
+  -moz-animation: AnimationName 16s ease infinite;
+  animation: AnimationName 16s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 60%;
+    }
+    50% {
+      background-position: 100% 41%;
+    }
+    100% {
+      background-position: 0% 60%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 60%;
+    }
+    50% {
+      background-position: 100% 41%;
+    }
+    100% {
+      background-position: 0% 60%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 60%;
+    }
+    50% {
+      background-position: 100% 41%;
+    }
+    100% {
+      background-position: 0% 60%;
+    }
+  }
+}

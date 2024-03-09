@@ -13,13 +13,22 @@ const FooterSocials = () => {
       </div>
       <div className="socials">
         <div className="social">
-          <TwitterLogo size={26} color="#fff" />
+          <a href="https://twitter.com/mKocikDev" target="_blank">
+            <TwitterLogo size={26} color="#fff" />
+          </a>
         </div>
         <div className="social">
-          <FacebookLogo size={26} color="#fff" />
+          <a
+            href="https://www.facebook.com/profile.php?id=100012762481414"
+            target="_blank"
+          >
+            <FacebookLogo size={26} color="#fff" />
+          </a>
         </div>
         <div className="social">
-          <InstagramLogo size={26} color="#fff" />
+          <a href="https://www.instagram.com/mikekdevv/" target="_blank">
+            <InstagramLogo size={26} color="#fff" />
+          </a>
         </div>
       </div>
     </div>

@@ -13,15 +13,7 @@
       position: relative;
       &::after {
         content: " ";
-        display: inline-block;
-        height: 50rem;
-        width: 50rem;
-        background-color: $primary;
-        filter: blur(110px);
-        z-index: -30;
-        opacity: 60%;
-        border-radius: 50%;
-        position: absolute;
+        @include elipse($primary);
         top: 205px;
         right: 79px;
       }
@@ -33,15 +25,7 @@
         position: relative;
         &::after {
           content: " ";
-          display: inline-block;
-          height: 50rem;
-          width: 50rem;
-          background-color: $secondary;
-          filter: blur(110px);
-          z-index: -30;
-          opacity: 60%;
-          border-radius: 50%;
-          position: absolute;
+          @include elipse($secondary);
           top: -178px;
           right: 191px;
         }

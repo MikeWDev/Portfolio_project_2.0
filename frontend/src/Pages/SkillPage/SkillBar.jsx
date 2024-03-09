@@ -12,7 +12,7 @@ const SkillBar = (props) => {
       );
       $(this).text($(this).attr("data-progress") + "%");
     });
-  }, []);
+  }, [props.dep]);
   return (
     <div className="skill-bar-con">
       <div className="bar-heading">

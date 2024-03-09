@@ -1,14 +1,12 @@
 import { MapPinLine } from "@phosphor-icons/react";
 import React from "react";
 
-const SocialElement = () => {
+const SocialElement = (props) => {
   return (
     <div className="social">
-      <div className="social-icon">
-        <MapPinLine size={25} color="#fff" />
-      </div>
+      <div className="social-icon">{props.svg}</div>
       <div className="social-info">
-        <p>fkdkk@gkdk.com</p>
+        <p>{props.data}</p>
       </div>
     </div>
   );

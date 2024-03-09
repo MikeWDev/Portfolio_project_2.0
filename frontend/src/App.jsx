@@ -1,7 +1,7 @@
 import AllProjects from "./Pages/AllProjects";
 import Footer from "./Pages/Footer/Footer";
 import MainPage from "./Pages/MainPage";
-import "./Styles/Css/App.css";
+import "./Scss/Css/App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {

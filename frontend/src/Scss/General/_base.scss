@@ -39,3 +39,15 @@ h2 {
   color: $fontColor;
   font-weight: 800;
 }
+.visible {
+  opacity: 1 !important;
+  transition: all ease-in-out 300ms;
+  transition-delay: 500ms;
+}
+.visible-pop-up {
+  top: 15% !important;
+  transition: all ease-in-out 1s;
+}
+.opacity-pop-up {
+  opacity: 0;
+}

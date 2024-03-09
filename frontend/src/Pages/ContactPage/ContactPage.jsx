@@ -2,6 +2,7 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import SocialElement from "./SocialElement";
 import NeonLight from "../../Components/NeonLight";
+import { Envelope, InstagramLogo, WhatsappLogo } from "@phosphor-icons/react";
 
 const ContactPage = () => {
   return (
@@ -26,9 +27,21 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="socials-con">
-                <SocialElement />
-                <SocialElement />
-                <SocialElement />
+                <SocialElement
+                  svg={<Envelope size={35} color="#fff" />}
+                  data="mkocik.dev@gmail.com"
+                />
+                <SocialElement
+                  svg={<WhatsappLogo size={35} color="#fff" />}
+                  data="+44 7496481135"
+                />
+                <a href="https://www.instagram.com/mikekdevv/" target="_blank">
+                  <SocialElement
+                    svg={<InstagramLogo size={35} color="#fff" />}
+                    data="mikekdevv"
+                    link=""
+                  />
+                </a>
               </div>
             </div>
             <div className="form-con">

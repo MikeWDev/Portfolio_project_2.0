@@ -3,9 +3,7 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 
 function buildStyles() {
-  return src("./src/Styles/App.scss")
-    .pipe(sass())
-    .pipe(dest("./src/Styles/Css"));
+  return src("./src/Scss/App.scss").pipe(sass()).pipe(dest("./src/Scss/Css"));
 }
 
 function watchTask() {

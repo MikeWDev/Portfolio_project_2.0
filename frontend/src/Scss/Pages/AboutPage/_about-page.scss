@@ -1,0 +1,29 @@
+.about {
+  margin-bottom: 25.6rem;
+  .content-con {
+    display: flex;
+    gap: 6.4rem;
+    .info-con {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      justify-content: center;
+      position: relative;
+      &::after {
+        @include elipse($secondary);
+        top: -100px;
+        right: -250px;
+      }
+      .desc {
+        &::after {
+          @include elipse($primary);
+          bottom: -171px;
+          right: -200px;
+        }
+        p {
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

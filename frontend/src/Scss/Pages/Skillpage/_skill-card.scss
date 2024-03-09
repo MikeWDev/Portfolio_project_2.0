@@ -1,4 +1,9 @@
 .skill-card-con {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    transform: scale(1.1);
+  }
   .skill-name {
     position: relative;
     border-radius: 17px; /*1*/
@@ -16,6 +21,9 @@
       align-items: center;
       justify-content: center;
       z-index: 10000;
+      &.active {
+        @include animatedHoverGrad();
+      }
     }
     .skill-svg {
       position: absolute;

@@ -1,0 +1,22 @@
+.tech-element {
+  height: fit-content;
+  width: fit-content;
+  .tech-info {
+    display: inline-block;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background: $borderGrad border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    h4 {
+      padding: 1rem;
+      background-image: $bgGrad;
+      display: inline-block;
+      border-radius: 8px;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      color: $fontColor;
+    }
+  }
+}

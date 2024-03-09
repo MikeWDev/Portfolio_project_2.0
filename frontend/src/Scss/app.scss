@@ -1,5 +1,6 @@
 //Variables
 @import "./General/variables";
+@import "./General/mixins";
 //Base
 @import "./General/base";
 @import "./General/sticky-nav";
@@ -8,6 +9,8 @@
 @import "./Components/button";
 @import "./Components/project-card";
 @import "./Components/neon-light";
+@import "./Components/tech-info";
+@import "./Components/pop-up";
 //pages
 @import "./Pages/HeroPage/hero-page";
 @import "./Pages/AboutPage/about-page";
@@ -22,3 +25,4 @@
 @import "./Pages/Footer/footer-socials";
 @import "./Components/button-hover";
 @import "./Pages/AllProjects/all-projects.scss";
+@import "./Pages/HeroPage/cv-download";

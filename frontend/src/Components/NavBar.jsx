@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/Components/KDev-logo 1.png";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import UseIntersecting from "../Hooks/useIntersecting";
+
+import usePopUp from "../Hooks/usePopUp";
 const Navbar = () => {
   const { stickyNav, navStyle } = UseIntersecting();
+  const { popUp, handlePopUp, visible } = usePopUp();
+  console.log(visible);
+  console.log(popUp);
   return (
     <div id="nav" className={`nav-bar ${navStyle} ${stickyNav} `}>
       <div className={`container `}>
