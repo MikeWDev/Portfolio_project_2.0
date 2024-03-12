@@ -13,7 +13,7 @@ const NavSm = ({ navOpen, navOpenFunction }) => {
     <>
       <div className={`${navOpen.glass} glass`}></div>
       <div className={`nav-sm ${navOpen.nav} `}>
-        <nav>
+        <nav className="navsm">
           <div onClick={handleClose} className="nav-sm-svg">
             <X color="#fff" size={32} />
           </div>

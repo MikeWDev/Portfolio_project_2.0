@@ -10,9 +10,9 @@ const MainPage = () => {
     <>
       <Navbar />
       <HeroPage />
-      {/* <AboutPage />
+      <AboutPage />
       <SkillPage />
-      <PortfolioPage />
+      {/* <PortfolioPage />
       <ContactPage /> */}
     </>
   );

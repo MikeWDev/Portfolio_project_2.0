@@ -24,8 +24,8 @@ const SkillPage = () => {
     );
 
     setSelectedSkill(filtred);
-  }, []);
-
+  }, [category]);
+  console.log(selectedSkill);
   return (
     <section>
       <div id="skill" className="skill">
