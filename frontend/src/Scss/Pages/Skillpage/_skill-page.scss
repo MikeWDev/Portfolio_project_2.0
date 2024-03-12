@@ -1,6 +1,10 @@
 @use "../../General/" as g;
 .skill {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
   margin-bottom: 25.6rem;
+  padding: 0 4rem;
   .content-con {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -36,6 +40,9 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 4.8rem;
+        &:nth-child(1) {
+          display: none;
+        }
       }
     }
   }
@@ -48,6 +55,78 @@
         font-size: 3.6rem;
         font-weight: 700;
         color: g.$fontColor;
+      }
+    }
+  }
+}
+@media (max-width: 63.12em) {
+  .skill {
+    .content-con {
+      gap: 3.6rem;
+      .skill-con {
+        .skill-cards {
+          &:nth-child(1) {
+            .skill-card-con {
+              .skill-name {
+                h4 {
+                  padding: 4rem 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//820px
+@media (max-width: 51.25em) {
+  .skill {
+    .content-con {
+      grid-template-columns: 1fr 2fr;
+      .skill-con {
+        .skill-cards {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 37.5em) {
+  .skill {
+    .content-con {
+      display: flex;
+      flex-direction: column;
+      .skill-con {
+        width: 100%;
+        .skill-cards {
+          .slick-slider {
+            width: 100%;
+            .slick-list {
+              margin: 0;
+              overflow: visible !important;
+              .slick-track {
+                .slick-slide {
+                  .skill-card-con {
+                    padding: 0 3rem;
+                  }
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+      .bar-con {
+        width: 100%;
       }
     }
   }

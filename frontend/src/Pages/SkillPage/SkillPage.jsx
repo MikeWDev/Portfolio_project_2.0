@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import SkillCard from "./SkillCard";
-import { PaintBrush } from "@phosphor-icons/react/dist/ssr";
-import { CodeBlock, Database, Wrench } from "@phosphor-icons/react";
+
 import SkillBar from "./SkillBar";
+import SkillCards from "./SkillCards";
+import SkillCardsSlickSlider from "./SkillCardsSlickSlider";
 
 const SkillPage = () => {
   const [allSkills, setAllSkills] = useState([]);
@@ -14,7 +14,7 @@ const SkillPage = () => {
       .then((res) => res.json())
       .then((data) => setAllSkills(data));
   }, []);
-
+  console.log(category);
   useEffect(() => {
     const filtred = allSkills.filter(
       (item) => {
@@ -24,50 +24,21 @@ const SkillPage = () => {
     );
 
     setSelectedSkill(filtred);
-  }, [category]);
-  console.log(selectedSkill);
+  }, [category, allSkills]);
+
   return (
     <section>
       <div id="skill" className="skill">
+        <div className="skill-heading">
+          <h2>Technical Proficiency</h2>
+        </div>
         <div className="content-con">
           <div className="skill-con">
-            <div className="skill-heading">
-              <h2>Technical Proficiency</h2>
-            </div>
-            <div className="skill-cards">
-              <SkillCard
-                active={category && category === "Webdesign" ? "active" : " "}
-                name="Web Desing"
-                svg={<PaintBrush color="#fff" size={25} />}
-                click={() => {
-                  setCategory("Webdesign");
-                }}
-              />
-              <SkillCard
-                active={category && category === "FrontEnd" ? "active" : " "}
-                name="Frontend"
-                svg={<CodeBlock color="#fff" size={25} />}
-                click={() => {
-                  setCategory("FrontEnd");
-                }}
-              />
-              <SkillCard
-                active={category && category === "BackEnd" ? "active" : " "}
-                name="Backend"
-                svg={<Database color="#fff" size={25} />}
-                click={() => {
-                  setCategory("BackEnd");
-                }}
-              />
-              <SkillCard
-                active={category && category === "Tools" ? "active" : " "}
-                name="Tools"
-                svg={<Wrench color="#fff" size={25} />}
-                click={() => {
-                  setCategory("Tools");
-                }}
-              />
-            </div>
+            <SkillCardsSlickSlider
+              category={category}
+              setCategory={setCategory}
+            />
+            <SkillCards category={category} setCategory={setCategory} />
           </div>
           <div className="bar-con">
             <div className="bar-heading">
