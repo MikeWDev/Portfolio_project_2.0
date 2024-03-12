@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 .skill-bar-con {
   display: flex;
   flex-direction: column;
@@ -8,7 +9,7 @@
     justify-content: space-between;
     h4 {
       font-size: 2.4rem;
-      color: $fontColor;
+      color: g.$fontColor;
       font-weight: bold;
       padding: 1rem 0;
     }
@@ -19,12 +20,12 @@
     border-radius: 7px;
     overflow: hidden;
     position: relative;
-    background-color: $darkGray;
+    background-color: g.$darkGray;
     span {
       height: 100%;
       display: block;
       width: 0;
-      background-image: $priSecGrad;
+      background-image: g.$priSecGrad;
       line-height: 30px;
       position: absolute;
       border-radius: 7px;

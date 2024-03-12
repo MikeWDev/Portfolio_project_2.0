@@ -1,17 +1,18 @@
+@use "../../General/" as g;
 .social {
   display: flex;
   flex-direction: row;
   gap: 4.6rem;
   .social-icon {
     padding: 1rem;
-    background-color: $primary;
+    background-color: g.$primary;
     border-radius: 8px;
   }
   .social-info {
     display: flex;
     align-self: center;
     p {
-      color: $fontColor;
+      color: g.$fontColor;
     }
   }
 }

@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 .contact-con {
   margin-bottom: 25.6rem;
   .contact {
@@ -19,14 +20,14 @@
           gap: 3.6rem;
           .heading {
             h3 {
-              color: $fontColor;
+              color: g.$fontColor;
               font-size: 3.2rem;
               font-weight: bold;
             }
           }
           .sub-heading {
             span {
-              color: $primary;
+              color: g.$primary;
             }
           }
         }

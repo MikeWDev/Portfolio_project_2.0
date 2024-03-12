@@ -1,10 +1,12 @@
+@use "../../General/" as g;
+
 .home {
   .cv-download {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: $priSecGrad;
+    background-image: g.$priSecGrad;
     padding: 2rem 3rem;
     border-radius: 60%;
     top: 1px;
@@ -13,7 +15,7 @@
     &::before {
       content: " ";
       display: inline-block;
-      background-image: $priSecGrad;
+      background-image: g.$priSecGrad;
       height: 130%;
       width: 130%;
       position: absolute;
@@ -25,7 +27,7 @@
     }
     .third-ellipse {
       display: inline-block;
-      background-image: $priSecGrad;
+      background-image: g.$priSecGrad;
       height: 160%;
       width: 160%;
       position: absolute;
@@ -35,9 +37,37 @@
       opacity: 40%;
     }
     .text {
-      color: $fontColor;
+      color: g.$fontColor;
       font-size: 3.2rem;
       font-weight: 700;
+    }
+  }
+}
+@media (max-width: 30.62em) {
+  .home {
+    .cv-download {
+      padding: 1.5rem 3rem;
+
+      &::before {
+        content: " ";
+        height: 138%;
+      }
+      .third-ellipse {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 25.62em) {
+  .home {
+    .cv-download {
+      padding: 1.2rem 3rem;
+
+      &::before {
+        content: " ";
+        height: 140%;
+        width: 135%;
+      }
     }
   }
 }

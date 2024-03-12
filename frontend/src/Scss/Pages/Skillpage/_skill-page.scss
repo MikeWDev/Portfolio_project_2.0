@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 .skill {
   margin-bottom: 25.6rem;
   .content-con {
@@ -13,7 +14,7 @@
       position: relative;
       &::after {
         content: " ";
-        @include elipse($primary);
+        @include g.elipse(g.$primary);
         top: 205px;
         right: 79px;
       }
@@ -25,7 +26,7 @@
         position: relative;
         &::after {
           content: " ";
-          @include elipse($secondary);
+          @include g.elipse(g.$secondary);
           top: -178px;
           right: 191px;
         }
@@ -46,7 +47,7 @@
       h3 {
         font-size: 3.6rem;
         font-weight: 700;
-        color: $fontColor;
+        color: g.$fontColor;
       }
     }
   }

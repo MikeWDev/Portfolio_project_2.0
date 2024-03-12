@@ -1,3 +1,4 @@
+@use "./variables" as g;
 @mixin elipse($color) {
   content: " ";
   height: 50rem;
@@ -8,6 +9,7 @@
   opacity: 60%;
   border-radius: 50%;
   position: absolute;
+  overflow: hidden;
 }
 @mixin glassEffect() {
   background: rgba(20, 26, 42, 0.25);
@@ -63,6 +65,49 @@
     }
     100% {
       background-position: 0% 60%;
+    }
+  }
+}
+@mixin neonUnderline() {
+  &:hover {
+    opacity: 1;
+  }
+  &::before {
+    transition: 500ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: g.$fontColor;
+    box-shadow: inset 0 0 3px g.$primary;
+    border-radius: 7px;
+    width: 0%;
+    top: 30px;
+  }
+  &:hover::before,
+  &:active::before {
+    width: 100%;
+  }
+  a {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      opacity: 1;
+    }
+    &::before {
+      transition: 500ms;
+      height: 12px;
+      content: "";
+      position: absolute;
+      background-color: g.$primary;
+      z-index: -1;
+      filter: blur(10px);
+      border-radius: 7px;
+      width: 0%;
+      top: 25px;
+    }
+    &:hover::before,
+    &:active::before {
+      width: 105%;
     }
   }
 }

@@ -1,9 +1,11 @@
+@use "../../General/" as g;
 footer {
   .logo-con {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.6rem;
+    cursor: pointer;
     .logo {
       img {
         height: 16rem;
@@ -17,7 +19,7 @@ footer {
       .social {
         padding: 1rem;
         border-radius: 50%;
-        background-image: $priSecGrad;
+        background-image: g.$priSecGrad;
       }
     }
   }

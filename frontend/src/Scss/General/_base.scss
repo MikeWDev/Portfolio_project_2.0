@@ -1,5 +1,5 @@
+@use "./variables" as g;
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -8,12 +8,13 @@
 }
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: $bgColor;
+  background-color: g.$bgColor;
+  overflow: hidden;
 }
 ul {
   padding: 0;
@@ -31,12 +32,12 @@ section {
 }
 p {
   font-size: 2rem;
-  color: $lightGray;
+  color: g.$lightGray;
   font-weight: 600;
 }
 h2 {
   font-size: 4.4rem;
-  color: $fontColor;
+  color: g.$fontColor;
   font-weight: 800;
 }
 .visible {
@@ -50,4 +51,7 @@ h2 {
 }
 .opacity-pop-up {
   opacity: 0;
+}
+.nav-sm-hidden {
+  left: -100% !important;
 }

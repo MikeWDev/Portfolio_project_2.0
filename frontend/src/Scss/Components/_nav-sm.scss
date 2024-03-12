@@ -1,0 +1,83 @@
+@use "../General/" as g;
+.nav-sm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9000000;
+  transition: all ease-in-out 800ms;
+  nav {
+    position: relative;
+    .nav-sm-svg {
+      position: absolute;
+      right: 10%;
+      top: 5%;
+      padding: 0.8rem;
+      background-color: g.$primary;
+      border-radius: 8px;
+    }
+    width: 60%;
+    height: 100%;
+
+    border-right: 3px solid transparent;
+    background: g.$borderGrad border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    .nav-sm-links {
+      padding: 0.5rem 1rem;
+      @include g.animatedHoverGrad();
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-items: center;
+      padding-left: 3rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          font-size: 4.8rem;
+          font-weight: 800;
+          color: g.$fontColor;
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
+}
+.nav-sm-glass {
+  @include g.glassEffect();
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all ease-in-out 300ms;
+  z-index: 9000000;
+}
+.glass {
+  transition: all ease-in-out 300ms;
+}
+@media (max-width: 35.62em) {
+  .nav-sm {
+    nav {
+      width: 70%;
+    }
+  }
+}
+@media (max-width: (26.56em)) {
+  .nav-sm {
+    nav {
+      width: 90%;
+      .nav-sm-links {
+        ul {
+          li {
+            font-size: 4.2rem;
+          }
+        }
+      }
+    }
+  }
+}

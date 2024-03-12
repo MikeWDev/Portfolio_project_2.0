@@ -1,13 +1,14 @@
+@use "../../General/" as g;
 .portfolio {
   position: relative;
   margin-bottom: 25.6rem;
   &::after {
-    @include elipse($secondary);
+    @include g.elipse(g.$secondary);
     left: -227px;
     top: -14px;
   }
   &::before {
-    @include elipse($primary);
+    @include g.elipse(g.$primary);
     right: -227px;
     bottom: -180px;
   }
@@ -24,7 +25,7 @@
         h2 {
           text-align: center;
           span {
-            color: $primary;
+            color: g.$primary;
           }
         }
       }

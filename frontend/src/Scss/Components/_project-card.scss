@@ -1,3 +1,4 @@
+@use "../General/" as g;
 .project-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,7 +16,7 @@
       width: 100%;
       top: 0;
       left: 100%;
-      @include glassEffect();
+      @include g.glassEffect();
       z-index: 10;
       border-radius: 9px;
       transition: all ease-in-out 300ms;
@@ -36,7 +37,7 @@
       display: inline-block;
       border-radius: 8px;
       border: 2px solid transparent;
-      background: $borderGrad border-box;
+      background: g.$borderGrad border-box;
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       position: absolute;
@@ -45,7 +46,7 @@
       z-index: 15;
       .svg {
         padding: 0.5rem 1rem;
-        background-image: $bgGrad;
+        background-image: g.$bgGrad;
         display: inline-block;
         border-radius: 8px;
         svg {
@@ -73,7 +74,7 @@
       width: 100%;
       justify-content: space-between;
       h4 {
-        color: $fontColor;
+        color: g.$fontColor;
         font-size: 3.2rem;
       }
     }

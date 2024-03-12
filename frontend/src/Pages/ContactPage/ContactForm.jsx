@@ -51,6 +51,7 @@ const ContactForm = () => {
       <div className="form-input">
         <label htmlFor="">Full name*</label>
         <input
+          required
           onChange={changeHandler}
           value={messageData.name}
           name="name"
@@ -60,6 +61,7 @@ const ContactForm = () => {
       <div className="form-input">
         <label htmlFor="">E-mail*</label>
         <input
+          required
           onChange={changeHandler}
           value={messageData.eMail}
           name="eMail"
@@ -69,6 +71,7 @@ const ContactForm = () => {
       <div className="form-input">
         <label htmlFor="">Message*</label>
         <textarea
+          required
           onChange={changeHandler}
           value={messageData.message}
           name="message"

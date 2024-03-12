@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 .home {
   margin-top: 9.6rem;
   margin-bottom: 25.6rem;
@@ -5,16 +6,14 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   position: relative;
-  &::after {
-    @include elipse($primary);
-    right: -280px;
-    top: -280px;
-  }
+
   .content-con {
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    .neon-light-con {
+      align-self: center;
+    }
     .slogans-container {
       display: flex;
       flex-direction: column;
@@ -23,7 +22,7 @@
         .big-slogans {
           position: relative;
           h1 {
-            color: $fontColor;
+            color: g.$fontColor;
             font-size: 8.6rem;
             font-weight: 800;
           }
@@ -32,7 +31,7 @@
       .sub-heading {
         h4 {
           font-size: 1.6rem;
-          color: $lightGray;
+          color: g.$lightGray;
         }
       }
       .button-container {
@@ -41,5 +40,143 @@
         gap: 2.3rem;
       }
     }
+  }
+  .image-con {
+    img {
+      width: 100%;
+    }
+    &::after {
+      @include g.elipse(g.$primary);
+      position: absolute;
+      right: -280px;
+      top: -280px;
+    }
+  }
+}
+//1177px
+@media (max-width: 73.56em) {
+  .home {
+    .content-con {
+      .slogans-container {
+        .slogans {
+          .big-slogans {
+            h1 {
+              font-size: 7.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//1124px
+@media (max-width: 70.25em) {
+  html {
+    font-size: 56.25% !important;
+  }
+  .home {
+    .content-con {
+      .neonlight-con {
+        .neon-light {
+          &::after {
+            height: 41.2rem;
+          }
+          &::before {
+            height: 47.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+//900px
+@media (max-width: 56.25em) {
+  .home {
+    .content-con {
+      .neonlight-con {
+        .neon-light {
+          &::after {
+            height: 35.2rem;
+          }
+          &::before {
+            height: 41.7rem;
+          }
+        }
+      }
+      .slogans-container {
+        .slogans {
+          .big-slogans {
+            h1 {
+              font-size: 6.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//775px
+@media (max-width: 48.43em) {
+  html {
+    font-size: 50% !important;
+  }
+  .home {
+    .content-con {
+      .neonlight-con {
+        .neon-light {
+          &::after {
+            height: 32.2rem;
+          }
+          &::before {
+            height: 38.7rem;
+          }
+        }
+      }
+      .slogans-container {
+        gap: 3.2rem;
+      }
+    }
+  }
+}
+//700px
+@media (max-width: 43.75em) {
+  .home {
+    grid-template-columns: 1fr;
+    .content-con {
+      .neonlight-con {
+        .neon-light {
+          &::after {
+            height: 35.2rem;
+            top: -5px;
+          }
+          &::before {
+            height: 41.7rem;
+          }
+        }
+      }
+    }
+    .image-con {
+      display: none;
+    }
+  }
+}
+//490
+@media (max-width: 30.62em) {
+  html {
+    font-size: 43.75% !important;
+  }
+  .neonlight-con {
+    width: 10% !important;
+    .neon-light {
+      &::after {
+        left: 10px !important;
+      }
+    }
+  }
+}
+//410
+@media (max-width: 25.62em) {
+  html {
+    font-size: 37.5% !important;
   }
 }

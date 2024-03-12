@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 .about {
   margin-bottom: 25.6rem;
   .content-con {
@@ -10,13 +11,13 @@
       justify-content: center;
       position: relative;
       &::after {
-        @include elipse($secondary);
+        @include g.elipse(g.$secondary);
         top: -100px;
         right: -250px;
       }
       .desc {
         &::after {
-          @include elipse($primary);
+          @include g.elipse(g.$primary);
           bottom: -171px;
           right: -200px;
         }

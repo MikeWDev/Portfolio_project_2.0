@@ -1,3 +1,4 @@
+@use "../General/" as g;
 .form {
   .pop-up {
     position: fixed;
@@ -5,15 +6,15 @@
     right: 15%;
     padding: 1rem;
     border-radius: 8px;
-    @include glassEffect();
+    @include g.glassEffect();
     overflow: hidden;
     transition: all ease-in-out 3s;
     p {
       position: relative;
-      color: $fontColor;
+      color: g.$fontColor;
     }
     span {
-      background-color: $primary;
+      background-color: g.$primary;
       width: 100%;
       height: 100%;
       position: absolute;

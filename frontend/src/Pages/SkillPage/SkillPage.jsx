@@ -24,7 +24,7 @@ const SkillPage = () => {
     );
 
     setSelectedSkill(filtred);
-  });
+  }, []);
 
   return (
     <section>

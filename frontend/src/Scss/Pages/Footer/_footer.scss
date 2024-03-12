@@ -1,3 +1,4 @@
+@use "../../General/" as g;
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -10,7 +11,7 @@ footer {
 
     .heading-con {
       font-size: 3.2rem;
-      color: $fontColor;
+      color: g.$fontColor;
     }
     .desc-con {
       p {
@@ -26,7 +27,7 @@ footer {
 
     .heading-con {
       font-size: 3.2rem;
-      color: $fontColor;
+      color: g.$fontColor;
     }
     nav {
       ul {
@@ -35,7 +36,7 @@ footer {
         gap: 1.6rem;
         li {
           font-size: 2rem;
-          color: $lightGray;
+          color: g.$lightGray;
           font-weight: 600;
         }
       }
@@ -49,12 +50,11 @@ footer {
   margin-bottom: 2.4rem;
   p {
     font-size: 1.2rem;
-    color: $lightGray;
+    color: g.$lightGray;
   }
 }
 hr {
   height: 1px;
-
-  background-image: $priSecGrad;
+  background-image: g.$priSecGrad;
   border: none;
 }

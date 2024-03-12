@@ -1,3 +1,4 @@
+@use "..//General/" as g;
 .button-con {
   button {
     cursor: pointer;
@@ -11,16 +12,16 @@
     overflow: hidden;
     position: relative;
     &:hover {
-      box-shadow: 0 0 10px $primary, 0 0 40px $primary;
+      box-shadow: 0 0 10px g.$primary, 0 0 40px g.$primary;
       transition-delay: 1s;
     }
   }
   .primary {
-    background-color: $primary;
-    color: $fontColor;
+    background-color: g.$primary;
+    color: g.$fontColor;
   }
   .secondary {
-    background-color: $darkGray;
-    color: $fontColor;
+    background-color: g.$darkGray;
+    color: g.$fontColor;
   }
 }

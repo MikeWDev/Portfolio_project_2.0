@@ -1,3 +1,4 @@
+@use "../General/" as g;
 .tech-element {
   height: fit-content;
   width: fit-content;
@@ -5,18 +6,18 @@
     display: inline-block;
     border-radius: 8px;
     border: 2px solid transparent;
-    background: $borderGrad border-box;
+    background: g.$borderGrad border-box;
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 
     h4 {
       padding: 1rem;
-      background-image: $bgGrad;
+      background-image: g.$bgGrad;
       display: inline-block;
       border-radius: 8px;
       font-size: 1.8rem;
       text-transform: capitalize;
-      color: $fontColor;
+      color: g.$fontColor;
     }
   }
 }
