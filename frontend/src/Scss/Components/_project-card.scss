@@ -5,7 +5,6 @@
   column-gap: 6.4rem;
   align-items: center;
   position: relative;
-
   .image-con {
     width: 100%;
     position: relative;
@@ -14,11 +13,10 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      top: 0;
-      left: 100%;
-      @include g.glassEffect();
+      top: -3%;
+      left: 0;
+      border-radius: 0.8rem;
       z-index: 10;
-      border-radius: 9px;
       transition: all ease-in-out 300ms;
       .tech-con {
         height: 100%;
@@ -33,27 +31,7 @@
         opacity: 0;
       }
     }
-    .tech-info-button {
-      display: inline-block;
-      border-radius: 8px;
-      border: 2px solid transparent;
-      background: g.$borderGrad border-box;
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      position: absolute;
-      right: -95%;
-      top: 5%;
-      z-index: 15;
-      .svg {
-        padding: 0.5rem 1rem;
-        background-image: g.$bgGrad;
-        display: inline-block;
-        border-radius: 8px;
-        svg {
-          transition: all ease-in-out 500ms;
-        }
-      }
-    }
+
     img {
       width: 100%;
     }
@@ -62,20 +40,48 @@
     display: flex;
     flex-direction: column;
     gap: 3.6rem;
-    position: relative;
   }
   .info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
     .header-con {
       display: flex;
-      width: 100%;
+      width: fit-content;
       justify-content: space-between;
-      h4 {
-        color: g.$fontColor;
-        font-size: 3.2rem;
+
+      .heading {
+        display: flex;
+        flex-direction: row;
+        .button-anchor {
+          position: relative;
+          .tech-info-button {
+            display: inline-block;
+            border-radius: 0.8rem;
+            border: 2px solid transparent;
+            background: g.$borderGrad border-box;
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            position: absolute;
+            left: 2rem;
+            top: -1rem;
+            z-index: 15;
+            transition: all ease-in-out 500ms;
+            .svg {
+              padding: 0.5rem 1rem;
+              background-image: g.$bgGrad;
+              display: inline-block;
+              border-radius: 0.8rem;
+              svg {
+                font-size: 3.5rem;
+              }
+            }
+          }
+        }
+        h4 {
+          color: g.$fontColor;
+          font-size: 3.2rem;
+        }
       }
     }
   }
@@ -87,5 +93,11 @@
   .button-con {
     display: flex;
     gap: 2.4rem;
+  }
+}
+@media (max-width: 43.8em) {
+  .project-card {
+    grid-template-columns: 1fr;
+    padding: 7rem;
   }
 }

@@ -18,10 +18,7 @@ const AllProjects = () => {
         <div className="all-projects">
           <div className="heading-con">
             <NavLink to="/">
-              <Button
-                class="primary"
-                text={<ArrowBendUpLeft size={38} color="#fff" />}
-              />
+              <Button class="primary" text={<ArrowBendUpLeft color="#fff" />} />
             </NavLink>
             <div>
               <h2>All Projects</h2>

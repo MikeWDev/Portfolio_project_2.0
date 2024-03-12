@@ -12,8 +12,8 @@ const MainPage = () => {
       <HeroPage />
       <AboutPage />
       <SkillPage />
-      {/* <PortfolioPage />
-      <ContactPage /> */}
+      <PortfolioPage />
+      {/* <ContactPage /> */}
     </>
   );
 };

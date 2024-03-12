@@ -57,3 +57,10 @@ h2 {
 .nav-sm-hidden {
   left: -100% !important;
 }
+.visible.blur {
+  filter: blur(20px);
+  transition: all ease-in-out 300ms;
+}
+.blur {
+  transition: all ease-in-out 300ms;
+}

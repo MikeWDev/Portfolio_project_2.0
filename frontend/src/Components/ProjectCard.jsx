@@ -6,6 +6,7 @@ import TechInfo from "./TechInfo";
 const ProjectCard = (props) => {
   const [visibleState, setVisibleState] = useState(true);
   const [visibleClass, setVisibleClass] = useState("");
+
   useEffect(() => {
     if (visibleState === false) {
       setVisibleClass("visible");
@@ -38,21 +39,7 @@ const ProjectCard = (props) => {
             <TechInfo />
           </div>
         </div>
-        <img src={props.image_url} alt="" />
-        <div className="tech-info-button">
-          <div
-            onClick={() => {
-              setVisibleState(!visibleState);
-            }}
-            className="svg"
-          >
-            {visibleState === true ? (
-              <Code size={35} color="#fff" weight="bold" />
-            ) : (
-              <X size={35} color="#fff" weight="bold" />
-            )}
-          </div>
-        </div>
+        <img className={`blur ${visibleClass}`} src={props.image_url} alt="" />
       </div>
 
       <div className={`info-con `}>
@@ -60,6 +47,22 @@ const ProjectCard = (props) => {
           <div className="header-con">
             <div className={`heading `}>
               <h4>{props.title}</h4>
+              <div className="button-anchor">
+                <div className={`tech-info-button `}>
+                  <div
+                    onClick={() => {
+                      setVisibleState(!visibleState);
+                    }}
+                    className="svg"
+                  >
+                    {visibleState === true ? (
+                      <Code color="#fff" weight="bold" />
+                    ) : (
+                      <X color="#fff" weight="bold" />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className={`desc-con `}>

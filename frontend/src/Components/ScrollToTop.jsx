@@ -18,7 +18,7 @@ const ScrollToTop = () => {
 
   return (
     <Link to="all-p" smooth={true} duration={1000}>
-      <Button class="secondary all-p" text={<ArrowUp size={42} />} />
+      <Button class="secondary all-p" text={<ArrowUp />} />
     </Link>
   );
 };
