@@ -10,9 +10,9 @@
       content: " ";
       height: 48.2rem;
       width: 1.6rem;
-      border-radius: 9px;
+      border-radius: 0.9rem;
       background-color: g.$fontColor;
-      box-shadow: inset 0 0 10px g.$primary;
+      box-shadow: inset 0 0 1rem g.$primary;
       z-index: 1;
       position: absolute;
       left: 40px;
@@ -24,7 +24,7 @@
       height: 54.7rem;
       width: 11.1rem;
       background-color: g.$primary;
-      filter: blur(72px);
+      filter: blur(7.2rem);
       z-index: -30;
       position: absolute;
     }

@@ -7,6 +7,9 @@
     padding: 1rem;
     background-color: g.$primary;
     border-radius: 8px;
+    svg {
+      font-size: 3.5rem;
+    }
   }
   .social-info {
     display: flex;

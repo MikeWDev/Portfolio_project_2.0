@@ -28,16 +28,16 @@ const ContactPage = () => {
               </div>
               <div className="socials-con">
                 <SocialElement
-                  svg={<Envelope size={35} color="#fff" />}
+                  svg={<Envelope color="#fff" />}
                   data="mkocik.dev@gmail.com"
                 />
                 <SocialElement
-                  svg={<WhatsappLogo size={35} color="#fff" />}
+                  svg={<WhatsappLogo color="#fff" />}
                   data="+44 7496481135"
                 />
                 <a href="https://www.instagram.com/mikekdevv/" target="_blank">
                   <SocialElement
-                    svg={<InstagramLogo size={35} color="#fff" />}
+                    svg={<InstagramLogo color="#fff" />}
                     data="mikekdevv"
                     link=""
                   />

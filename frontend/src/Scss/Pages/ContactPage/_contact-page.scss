@@ -1,6 +1,18 @@
 @use "../../General/" as g;
 .contact-con {
   margin-bottom: 25.6rem;
+  .neonlight-con {
+    .neon-light {
+      &::before {
+        height: 50.7rem;
+        top: 77px;
+      }
+      &::after {
+        height: 44rem;
+        top: 77px;
+      }
+    }
+  }
   .contact {
     display: flex;
     flex-direction: column;
@@ -36,6 +48,45 @@
           flex-direction: column;
           gap: 3.6rem;
         }
+      }
+    }
+  }
+}
+//1000px
+@media (max-width: 62.5em) {
+  .contact-con {
+    .contact {
+      .content-con {
+        gap: 4.8rem;
+      }
+    }
+  }
+}
+//900px
+@media (max-width: 56.25em) {
+  .contact-con {
+    .neonlight-con {
+      display: none;
+    }
+    .contact {
+      .content-con {
+        gap: 4.8rem;
+      }
+    }
+  }
+}
+//775px
+@media (max-width: 56.25em) {
+  .contact-con {
+    .neonlight-con {
+      display: flex;
+    }
+    .contact {
+      .content-con {
+        width: 70%;
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        gap: 8.6rem;
       }
     }
   }

@@ -43,3 +43,26 @@
     }
   }
 }
+
+@media (max-width: 56.25em) {
+  .form-con {
+    .form {
+      .form-input {
+        label {
+          font-size: 2rem;
+          color: g.$lightGray;
+          font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"] {
+          height: 4.6rem;
+          border-radius: 0.8rem;
+          font-size: 2rem;
+        }
+        textarea {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
