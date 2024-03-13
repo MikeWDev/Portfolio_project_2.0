@@ -21,20 +21,6 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="nav-con">
-            <div className="heading-con">
-              <h3>Navigation</h3>
-            </div>
-            <nav>
-              <ul>
-                <li>Home</li>
-                <li>Skills</li>
-                <li>Portfolio</li>
-                <li>See all projects</li>
-                <li>Contact</li>
-              </ul>
-            </nav>
-          </div>
         </footer>
         <div className="cp-rg">
           <p>Copyright © 2024 KDevelopment. All Rights Reserved</p>

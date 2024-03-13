@@ -1,7 +1,7 @@
 @use "../../General/" as g;
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 2.4rem;
   margin: 6.4rem 0;
   .slogan-con {
@@ -15,8 +15,8 @@ footer {
     }
     .desc-con {
       p {
-        line-height: 34px;
-        padding-right: 2rem;
+        line-height: 3.4rem;
+        padding-right: 9.6rem;
       }
     }
   }
@@ -57,4 +57,31 @@ hr {
   height: 1px;
   background-image: g.$priSecGrad;
   border: none;
+}
+//775px
+@media (max-width: 39.06em) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.2rem;
+    align-items: center;
+    .slogan-con {
+      padding: 0;
+      width: 60%;
+      align-items: center;
+
+      .heading-con {
+        font-size: 3.2rem;
+        color: g.$fontColor;
+      }
+      .desc-con {
+        margin-left: 2rem;
+        p {
+          width: fit-content;
+          line-height: 3.4rem;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
