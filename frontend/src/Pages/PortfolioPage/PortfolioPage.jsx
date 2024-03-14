@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProjectCard from "../../Components/ProjectCard";
 import Button from "../../Components/Button";
 import { NavLink } from "react-router-dom";
+import { PortfolioContext } from "../../Context/PortfolioContext";
 const PortfolioPage = () => {
+  const { allProjects } = useContext(PortfolioContext);
+  const [slicedContent, setSlicedContent] = useState([]);
+  useEffect(() => {
+    const slicedArray = allProjects.slice(3);
+    setSlicedContent(slicedArray);
+  }, []);
+  console.log(slicedContent);
   return (
     <section>
       <div id="portfolio" className="portfolio">
@@ -18,7 +26,18 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="project-con">
-            <ProjectCard />
+            {slicedContent &&
+              slicedContent.map((project, i) => {
+                return (
+                  <ProjectCard
+                    title={project.title}
+                    desc={project.desc}
+                    web_link={project.web_link}
+                    git_link={project.git_link}
+                    image_url={project.image_url}
+                  />
+                );
+              })}
           </div>
           <div className="button-con">
             <NavLink to="/all-projects">

@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-import React from "react";
+export const PortfolioContext = createContext(null);
 
-const PortfolioContext = () => {
-  return <div></div>;
+const PortfolioContextProvider = (props) => {
+  const [allProjects, setAllProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/allprojects")
+      .then((res) => res.json())
+      .then((data) => setAllProjects(data));
+  }, []);
+  const contextValue = {
+    allProjects,
+  };
+  return (
+    <PortfolioContext.Provider value={contextValue}>
+      {props.children}
+    </PortfolioContext.Provider>
+  );
 };
-
-export default PortfolioContext;
+export default PortfolioContextProvider;

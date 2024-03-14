@@ -4,7 +4,7 @@ const TechInfo = (props) => {
   return (
     <div className="tech-element">
       <div className="tech-info">
-        <h4>node.js</h4>
+        <h4>{props.name}</h4>
       </div>
     </div>
   );

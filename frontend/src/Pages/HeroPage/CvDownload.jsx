@@ -4,10 +4,17 @@ import React from "react";
 const CvDownload = () => {
   return (
     <div className="cv-download">
-      <div className="text">CV</div>
-      <div className="svg">
-        <DownloadSimple size={24} color="#fff" weight="bold" />
-      </div>
+      <a
+        href="frontend\src\assets\Components\KDev-logo.png"
+        download="user-img.jpg"
+      >
+        <div className="text">
+          CV
+          <div className="svg">
+            <DownloadSimple color="#fff" weight="bold" />
+          </div>
+        </div>
+      </a>
       <div className="third-ellipse"></div>
     </div>
   );

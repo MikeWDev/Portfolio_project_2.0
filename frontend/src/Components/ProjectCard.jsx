@@ -21,22 +21,10 @@ const ProjectCard = (props) => {
       <div className="image-con">
         <div className={`tech-overlap ${visibleClass}`}>
           <div className={`tech-con ${visibleClass}`}>
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
-            <TechInfo />
+            {props.skills &&
+              props.skills.map((skill, i) => {
+                return <TechInfo name={skill.skill} key={i} />;
+              })}
           </div>
         </div>
         <img className={`blur ${visibleClass}`} src={props.image_url} alt="" />
