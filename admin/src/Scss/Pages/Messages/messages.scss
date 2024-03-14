@@ -4,12 +4,14 @@
   flex-direction: column;
   gap: 2.4rem;
   padding: 2rem;
+  width: 100%;
   .messages-con {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
     height: 100vh;
     overflow: auto;
+
     &::-webkit-scrollbar {
       width: 1rem;
       border-radius: 30px;

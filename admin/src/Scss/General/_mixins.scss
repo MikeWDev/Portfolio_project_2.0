@@ -59,3 +59,7 @@
     }
   }
 }
+@mixin glassEffect() {
+  background: rgba(20, 26, 42, 0.25);
+  backdrop-filter: blur(12px);
+}

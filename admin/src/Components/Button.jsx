@@ -3,9 +3,7 @@ import React from "react";
 const Button = (props) => {
   return (
     <div className="button-con">
-      <button type={props.type} onClick={props.onClick}>
-        {props.text}
-      </button>
+      <button>{props.text}</button>
     </div>
   );
 };

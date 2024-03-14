@@ -5,6 +5,9 @@
   border: 3px dashed rgb(210, 227, 244);
   padding: 3.6rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   img {
     height: 100%;

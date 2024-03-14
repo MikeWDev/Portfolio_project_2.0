@@ -1,0 +1,36 @@
+@use "../../General/" as g;
+.skill-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+  .display {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    p {
+      font-size: 1.8rem;
+      color: g.$fontColor;
+      padding: 0.5rem;
+      border-radius: 0.8rem;
+      background-color: g.$primary;
+      font-weight: 600;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+  }
+  button {
+    padding: 0.8rem;
+    width: fit-content;
+    background-color: g.$primary;
+    border-style: none;
+    color: g.$fontColor;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}

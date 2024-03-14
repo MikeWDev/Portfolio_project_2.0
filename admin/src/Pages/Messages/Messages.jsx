@@ -1,19 +1,33 @@
 import React from "react";
 import Message from "./Message";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Messages = () => {
+  const [allMessages, setAllMessages] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/allmessages")
+      .then((res) => res.json())
+      .then((data) => setAllMessages(data));
+  }, []);
+  console.log(allMessages);
   return (
     <div className="messages-con">
       <div className="heading">
         <h2>Messages</h2>
       </div>
       <div className="messages-con">
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
+        {allMessages &&
+          allMessages.map((mess, i) => {
+            return (
+              <Message
+                name={mess.name}
+                eMail={mess.eMail}
+                message={mess.message}
+                key={i}
+              />
+            );
+          })}
       </div>
     </div>
   );

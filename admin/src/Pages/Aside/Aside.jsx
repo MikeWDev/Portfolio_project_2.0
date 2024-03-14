@@ -6,6 +6,7 @@ import {
   Envelope,
   FilePlus,
   FolderPlus,
+  UserList,
 } from "@phosphor-icons/react";
 import { Link, NavLink } from "react-router-dom";
 import { HouseSimple } from "@phosphor-icons/react";
@@ -48,7 +49,12 @@ const Aside = () => {
             <Actionbutton
               icon={<FolderPlus color="#ada9bb" size={32} />}
               name="Add project"
-              to="add-project"
+              to="addproject"
+            />
+            <Actionbutton
+              icon={<UserList color="#ada9bb" size={32} />}
+              name="Add skill"
+              to="addskill"
             />
           </div>
         </nav>

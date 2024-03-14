@@ -1,12 +1,12 @@
 import { PushPinSimple, Trash } from "@phosphor-icons/react";
 import React from "react";
 
-const Message = () => {
+const Message = (props) => {
   return (
     <div className="message-con">
       <div className="name-con">
         <div className="name">
-          <h3>Gosia Zwierzyńska</h3>
+          <h3>{props.name}</h3>
         </div>
         <div className="menage-icons">
           <div className="svg">
@@ -18,19 +18,10 @@ const Message = () => {
         </div>
       </div>
       <div className="email">
-        <p>gosia.zwierzyńska@gmail.com</p>
+        <p>{props.eMail}</p>
       </div>
       <div className="message">
-        <p>
-          Hi Michal, Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Animi assumenda rem quaerat delectus nemo unde consequuntur numquam
-          est fuga tenetur! est fuga tenetur! est fuga tenetur! est fuga
-          tenetur! est fuga tenetur! tenetur! est fuga tenetur! tenetur! est
-          fuga tenetur! tenetur! est fuga tenetur! tenetur! est fuga tenetur!
-          tenetur! est fuga tenetur! tenetur! est fuga tenetur! tenetur! est
-          fuga tenetur! tenetur! est fuga tenetur! tenetur! est fuga tenetur!
-          tenetur! est fuga tenetur! tenetur! est fuga tenetur!
-        </p>
+        <p>{props.message}</p>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import DashBoard from "./Pages/Dashboard/DashBoard";
 import Messages from "./Pages/Messages/Messages";
+import AddSkill from "./Pages/AddSkill/AddSkill";
 function App() {
   const router = createBrowserRouter([
     {
@@ -19,8 +20,12 @@ function App() {
           element: <Messages />,
         },
         {
-          path: "add-project",
+          path: "addproject",
           element: <AddProjectPanel />,
+        },
+        {
+          path: "addskill",
+          element: <AddSkill />,
         },
       ],
     },

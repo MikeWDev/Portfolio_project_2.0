@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { FileImage } from "@phosphor-icons/react";
-import dummyimg from "../../assets/user-img.jpg";
-const ImageInput = () => {
-  const [selectedImg, setSelectedImg] = useState(null);
+
+const ImageInput = (props) => {
+  const { imageFunction, image } = props;
   return (
     <div className="image-input">
-      {selectedImg ? (
+      {image ? (
         <div className="img-field">
-          <img src={selectedImg} alt="" />
+          <img src={image} alt="" />
           <span
             onClick={() => {
-              setSelectedImg(null);
+              imageFunction(null);
             }}
           >
             Remove
@@ -20,9 +20,11 @@ const ImageInput = () => {
         <div className="file-input">
           <FileImage size={48} color="#ada9bb" />
           <input
+            name="image"
+            id="file-input"
             onChange={(e) => {
               const img = URL.createObjectURL(e.target.files[0]);
-              setSelectedImg(img);
+              imageFunction(img);
             }}
             type="file"
           />
