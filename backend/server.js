@@ -63,6 +63,7 @@ app.post("/addproject", async (req, res) => {
     web_link: req.body.web_link,
     git_link: req.body.git_link,
     image_url: req.body.image_url,
+    skills: req.body.skills,
   });
 
   await project.save();
@@ -103,7 +104,7 @@ app.get("/allmessages", async (req, res) => {
 //Skill
 app.get("/allskills", async (req, res) => {
   let skills = await Skill.find({});
-  console.log("All messages fetched");
+  console.log("All skills fetched");
   res.send(skills);
 });
 app.post("/addskill", async (req, res) => {
