@@ -58,16 +58,12 @@ const ProjectCard = (props) => {
           </div>
         </div>
         <div className={`button-con `}>
-          <Button
-            web_link={props.web_link}
-            class="primary"
-            text="Visit website"
-          />
-          <Button
-            web_link={props.web_link}
-            class="secondary"
-            text="See the code"
-          />
+          <a href={props.web_link} target="_blank">
+            <Button class="primary" text="Visit website" />
+          </a>
+          <a href={props.git_link} target="_blank">
+            <Button class="secondary" text="See the code" />
+          </a>
         </div>
       </div>
     </div>

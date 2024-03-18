@@ -10,11 +10,12 @@ const SkillPage = () => {
   const [selectedSkill, setSelectedSkill] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/allskills")
+    const baseUrl = `${import.meta.env.VITE_SERVER_URL}`;
+    fetch(`${import.meta.env.VITE_SERVER_URL}/allskills`)
       .then((res) => res.json())
       .then((data) => setAllSkills(data));
   }, []);
-  console.log(category);
+
   useEffect(() => {
     const filtred = allSkills.filter(
       (item) => {

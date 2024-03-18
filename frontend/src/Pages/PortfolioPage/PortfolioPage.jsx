@@ -10,7 +10,7 @@ const PortfolioPage = () => {
     const slicedArray = allProjects.slice(3);
     setSlicedContent(slicedArray);
   }, []);
-  console.log(slicedContent);
+
   return (
     <section>
       <div id="portfolio" className="portfolio">
