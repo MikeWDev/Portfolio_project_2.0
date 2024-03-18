@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import PopUp from "../../Components/PopUp";
 import UsePopUp from "../../hooks/UsePopUp";
 import ProjectInputs from "./ProjectInputs";
@@ -18,14 +17,14 @@ const AddProjectPanel = () => {
   const changeHandler = (e) => {
     setProjectData({ ...projectData, [e.target.name]: e.target.value });
   };
+  const serverUrl = `${import.meta.env.VITE_SERVER_URL}`;
 
-  console.log(projectData);
   const addProject = async () => {
     let responseData;
     let project = projectData;
     let formData = new FormData();
     formData.append("project", image_url);
-    await fetch("http://localhost:3000/upload", {
+    await fetch(`${serverUrl}/upload`, {
       method: "POST",
       headers: {
         Accept: "aplication/json",
@@ -49,7 +48,7 @@ const AddProjectPanel = () => {
     if (responseData.success) {
       project.image_url = responseData.image_url;
       console.log(project);
-      await fetch("http://localhost:3000/addproject", {
+      await fetch(`${serverUrl}/addproject`, {
         method: "POST",
         headers: {
           Accept: "application/json",

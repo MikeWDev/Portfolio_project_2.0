@@ -6,7 +6,8 @@ import { useEffect } from "react";
 const Messages = () => {
   const [allMessages, setAllMessages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/allmessages")
+    const serverUrl = `${import.meta.env.VITE_SERVER_URL}`;
+    fetch(`${serverUrl}/allmessages`)
       .then((res) => res.json())
       .then((data) => setAllMessages(data));
   }, []);

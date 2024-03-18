@@ -14,8 +14,9 @@ const AddSkill = () => {
   };
 
   const addSkill = async () => {
+    const serverUrl = `${import.meta.env.VITE_SERVER_URL}`;
     let skill = skillData;
-    await fetch("http://localhost:3000/addskill", {
+    await fetch(`${serverUrl}/addskill`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -28,7 +29,7 @@ const AddSkill = () => {
         data.success ? alert("Nje") : handlePopUp();
         setSkillData({
           name: "",
-          // category: "",
+          category: "",
           progress: "",
         });
       });
