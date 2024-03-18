@@ -7,6 +7,7 @@ const Project = require("./Models/ProjectModel");
 const Message = require("./Models/MessageModel");
 const Skill = require("./Models/SkillModel");
 require("dotenv").config();
+const functions = require("firebase-functions");
 //Models
 
 const app = express();
@@ -120,3 +121,5 @@ app.post("/addskill", async (req, res) => {
     name: req.body.name,
   });
 });
+
+exports.app = functions.https.onRequest(app);
