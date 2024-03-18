@@ -43,7 +43,7 @@ app.use("/project-images", express.static("upload/project-images"));
 app.post("/upload", upload.single("project"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/project-images/${req.file.filename}`,
+    image_url: `${process.env.VITE_SERVER_URL}/project-images/${req.file.filename}`,
   });
 });
 // Adding new project
