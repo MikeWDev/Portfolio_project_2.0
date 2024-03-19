@@ -7,7 +7,7 @@ import LoadingGuy from "../../Components/LoadingGuy";
 import { PortfolioContext } from "../../Context/PortfolioContext";
 
 const SkillPage = () => {
-  const [category, setCategory] = useState("Web Design");
+  const [category, setCategory] = useState("Webdesign");
   const [selectedSkill, setSelectedSkill] = useState([]);
   const { allSkills, loading } = useContext(PortfolioContext);
   useEffect(() => {
@@ -18,7 +18,7 @@ const SkillPage = () => {
       [category]
     );
     setSelectedSkill(filtred);
-  }, [category, allSkills]);
+  }, [allSkills, category]);
 
   return (
     <section>
@@ -39,7 +39,7 @@ const SkillPage = () => {
               <h3>{category}</h3>
             </div>
             <div className="bar-con">
-              {loading && loading === true ? (
+              {loading === true ? (
                 <LoadingGuy />
               ) : (
                 selectedSkill &&

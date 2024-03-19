@@ -15,7 +15,6 @@ const ProjectCard = (props) => {
     }
   }, [visibleState]);
 
-  console.log(visibleClass);
   return (
     <div className="project-card">
       <div className="image-con">

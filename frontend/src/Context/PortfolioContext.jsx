@@ -6,6 +6,7 @@ const PortfolioContextProvider = (props) => {
   const [allProjects, setAllProjects] = useState([]);
   const [allSkills, setAllSkills] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const baseUrl = `${import.meta.env.VITE_SERVER_URL}`;
     fetch(`${baseUrl}/allprojects`)
@@ -18,6 +19,7 @@ const PortfolioContextProvider = (props) => {
       .then((res) => res.json())
       .then((data) => setAllSkills(data), setLoading(false));
   }, []);
+
   const contextValue = {
     allProjects,
     loading,
