@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import SkillBar from "./SkillBar";
 import SkillCards from "./SkillCards";
 import SkillCardsSlickSlider from "./SkillCardsSlickSlider";
+import LoadingGuy from "../../Components/LoadingGuy";
+import { PortfolioContext } from "../../Context/PortfolioContext";
 
 const SkillPage = () => {
-  const [allSkills, setAllSkills] = useState([]);
   const [category, setCategory] = useState("Web Design");
   const [selectedSkill, setSelectedSkill] = useState([]);
-
-  useEffect(() => {
-    const baseUrl = `${import.meta.env.VITE_SERVER_URL}`;
-    fetch(`${import.meta.env.VITE_SERVER_URL}/allskills`)
-      .then((res) => res.json())
-      .then((data) => setAllSkills(data));
-  }, []);
-
+  const { allSkills, loading } = useContext(PortfolioContext);
   useEffect(() => {
     const filtred = allSkills.filter(
       (item) => {
@@ -23,7 +17,6 @@ const SkillPage = () => {
       },
       [category]
     );
-
     setSelectedSkill(filtred);
   }, [category, allSkills]);
 
@@ -46,7 +39,10 @@ const SkillPage = () => {
               <h3>{category}</h3>
             </div>
             <div className="bar-con">
-              {selectedSkill &&
+              {loading && loading === true ? (
+                <LoadingGuy />
+              ) : (
+                selectedSkill &&
                 selectedSkill.map((skill, i) => {
                   return (
                     <SkillBar
@@ -56,7 +52,8 @@ const SkillPage = () => {
                       dep={selectedSkill}
                     />
                   );
-                })}
+                })
+              )}
             </div>
           </div>
         </div>

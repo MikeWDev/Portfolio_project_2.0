@@ -5,9 +5,10 @@ import Button from "../Components/Button";
 import { NavLink } from "react-router-dom";
 import ScrollToTop from "../Components/ScrollToTop";
 import { PortfolioContext } from "../Context/PortfolioContext";
+import LoadingGuy from "../Components/LoadingGuy";
 
 const AllProjects = () => {
-  const { allProjects } = useContext(PortfolioContext);
+  const { allProjects, loading } = useContext(PortfolioContext);
 
   return (
     <div id="all-p" className="ani-grad">
@@ -23,7 +24,10 @@ const AllProjects = () => {
             <div></div>
           </div>
           <div className="project-con">
-            {allProjects &&
+            {loading && loading === true ? (
+              <LoadingGuy />
+            ) : (
+              allProjects &&
               allProjects.map((project, i) => {
                 return (
                   <ProjectCard
@@ -35,7 +39,8 @@ const AllProjects = () => {
                     skills={project.skills}
                   />
                 );
-              })}
+              })
+            )}
           </div>
           <ScrollToTop />
         </div>
