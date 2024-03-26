@@ -7,7 +7,7 @@ const Project = require("./Models/ProjectModel");
 const Message = require("./Models/MessageModel");
 const Skill = require("./Models/SkillModel");
 require("dotenv").config();
-const functions = require("firebase-functions");
+
 //Models
 
 const app = express();
@@ -43,7 +43,7 @@ app.use("/project-images", express.static("upload/project-images"));
 app.post("/upload", upload.single("project"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/project-images/${req.file.filename}`,
+    image_url: `${process.env.SERVER_URL}/project-images/${req.file.filename}`,
   });
 });
 // Adding new project
@@ -121,5 +121,3 @@ app.post("/addskill", async (req, res) => {
     name: req.body.name,
   });
 });
-
-exports.app = functions.https.onRequest(app);
