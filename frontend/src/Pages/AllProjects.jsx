@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ProjectCard from "../Components/ProjectCard";
 import { ArrowBendUpLeft } from "@phosphor-icons/react";
 import Button from "../Components/Button";
@@ -31,12 +31,14 @@ const AllProjects = () => {
               allProjects.map((project, i) => {
                 return (
                   <ProjectCard
+                    key={i}
                     title={project.title}
                     desc={project.desc}
                     web_link={project.web_link}
                     git_link={project.git_link}
                     image_url={project.image_url}
                     skills={project.skills}
+                    build={project.build}
                   />
                 );
               })

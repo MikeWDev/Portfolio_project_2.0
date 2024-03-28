@@ -7,7 +7,7 @@ const PortfolioPage = () => {
   const { allProjects } = useContext(PortfolioContext);
   const [slicedContent, setSlicedContent] = useState([]);
   useEffect(() => {
-    const slicedArray = allProjects.slice(3);
+    const slicedArray = allProjects.slice(2);
     setSlicedContent(slicedArray);
   }, []);
 
