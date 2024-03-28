@@ -1,11 +1,21 @@
-import { Code, X } from "@phosphor-icons/react";
+import { Code, Info, X } from "@phosphor-icons/react";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import TechInfo from "./TechInfo";
+import Tag from "./Tag";
 
 const ProjectCard = (props) => {
   const [visibleState, setVisibleState] = useState(true);
   const [visibleClass, setVisibleClass] = useState("");
+  const [visibleBuild, setVisibleBuild] = useState("");
+
+  useEffect(() => {
+    if (props.build === true) {
+      setVisibleBuild("info-project-visible");
+    } else {
+      setVisibleBuild("");
+    }
+  }, [props]);
 
   useEffect(() => {
     if (visibleState === false) {
@@ -24,6 +34,14 @@ const ProjectCard = (props) => {
               props.skills.map((skill, i) => {
                 return <TechInfo name={skill.skill} key={i} />;
               })}
+          </div>
+        </div>
+        <div className={`info-project ${visibleBuild} `}>
+          <div className="svg-con">
+            <div className="svg">
+              <Info color="#fff" />
+            </div>
+            <span className="span-delay">Project still in build</span>
           </div>
         </div>
         <img className={`blur ${visibleClass}`} src={props.image_url} alt="" />

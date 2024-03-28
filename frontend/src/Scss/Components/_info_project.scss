@@ -1,0 +1,53 @@
+@use "../General/" as g;
+.info-project {
+  display: inline-block;
+  width: 70rem;
+  overflow: hidden;
+  border-radius: 20rem;
+  position: absolute;
+  left: -5%;
+  top: -10%;
+  opacity: 0;
+  .svg-con {
+    width: 100%;
+    position: relative;
+
+    border-radius: 20rem;
+    width: fit-content;
+    z-index: 999;
+    .svg {
+      padding: 1rem;
+      background-color: g.$darkGray;
+      border-radius: 20rem;
+    }
+    svg {
+      width: fit-content;
+      font-size: 4.2rem;
+      cursor: pointer;
+    }
+    span {
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.7rem;
+      padding-left: 6.2rem;
+      font-size: 2.4rem;
+      position: absolute;
+      background-color: g.$darkGray;
+      color: g.$fontColor;
+      left: -450%;
+      top: 0;
+      border-radius: 20rem;
+      z-index: -5;
+      font-weight: 600;
+      transition: all 500ms ease-in-out;
+    }
+    &:hover span {
+      left: 15%;
+    }
+  }
+}
+.info-project-visible {
+  opacity: 1;
+}
