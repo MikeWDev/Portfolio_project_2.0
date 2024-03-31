@@ -22,6 +22,7 @@ const HeroPage = () => {
                   Web Developer
                 </h1>
                 <CvDownload />
+                <img src={profile} alt="" />
               </div>
               <div className="sub-heading">
                 <h4>React / Node.js / Mongo DB</h4>
@@ -35,9 +36,7 @@ const HeroPage = () => {
             </div>
           </div>
         </div>
-        <div className="image-con">
-          <img src={profile} alt="" />
-        </div>
+        <div className="image-con"></div>
       </div>
     </section>
   );

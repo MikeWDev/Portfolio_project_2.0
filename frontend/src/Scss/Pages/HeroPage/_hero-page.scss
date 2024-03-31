@@ -12,7 +12,6 @@
     flex-direction: row;
     align-items: center;
     .neon-light-con {
-      align-self: center;
     }
     .slogans-container {
       display: flex;
@@ -25,6 +24,12 @@
             color: g.$fontColor;
             font-size: 8.6rem;
             font-weight: 800;
+          }
+          img {
+            position: absolute;
+            top: -85%;
+            left: 80%;
+            height: 300%;
           }
         }
       }
