@@ -29,6 +29,10 @@ const projectSchema = new Schema(
       required: true,
     },
     skills: [],
+    build: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
