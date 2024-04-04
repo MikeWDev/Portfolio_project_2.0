@@ -1,13 +1,10 @@
 import { DownloadSimple } from "@phosphor-icons/react";
 import React from "react";
-
+import cv from "../../assets/Components/Michał_Kocik_CV.pdf";
 const CvDownload = () => {
   return (
     <div className="cv-download">
-      <a
-        href="frontend\src\assets\Components\KDev-logo.png"
-        download="user-img.jpg"
-      >
+      <a href={cv} download="Michał_Kocik_CV.pdf">
         <div className="text">
           CV
           <div className="svg">
