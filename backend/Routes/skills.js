@@ -6,3 +6,5 @@ const { getSkills, addSkill } = require("../Controllers/skillController");
 router.get("/allskills", getSkills);
 //Adding new skill
 router.post("/addskill", addSkill);
+
+module.exports = router;

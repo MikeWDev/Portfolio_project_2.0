@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
         </div>
         <div
           className={`info-project ${
-            props.build === "true" ? "info-project-visible" : " "
+            props.build === true ? "info-project-visible" : " "
           } `}
         >
           <div className="svg-con">

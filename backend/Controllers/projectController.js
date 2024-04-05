@@ -37,23 +37,5 @@ const addProject = async (req, res) => {
   });
 };
 //Multer storage for project images
-const storage = multer.diskStorage({
-  destination: "./upload/projectImages",
-  filename: (req, file, cb) => {
-    return cb(
-      null,
-      `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
-    );
-  },
-});
-
-const upload = multer({ storage: storage });
-app.use("/projectImages", express.static("upload/projectImages"));
-app.post("/upload", upload.single("project"), (req, res) => {
-  res.json({
-    success: 1,
-    image_url: `${process.env.SERVER_URL}/projectImages/${req.file.filename}`,
-  });
-});
 
 module.exports = { getProjects, addProject };
