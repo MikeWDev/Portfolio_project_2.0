@@ -30,8 +30,8 @@ const SkillCards = ({ category, setCategory }) => {
         }}
       />
       <SkillCard
-        active={category && category === "Tools" ? "active" : " "}
-        name="Tools"
+        active={category && category === "SoftSkills" ? "active" : " "}
+        name="Soft skills"
         svg={<Wrench color="#fff" size={25} />}
         click={() => {
           setCategory("Tools");
