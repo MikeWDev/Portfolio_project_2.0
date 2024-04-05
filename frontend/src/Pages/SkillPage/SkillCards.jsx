@@ -34,7 +34,7 @@ const SkillCards = ({ category, setCategory }) => {
         name="Soft skills"
         svg={<Wrench color="#fff" size={25} />}
         click={() => {
-          setCategory("Tools");
+          setCategory("SoftSkills");
         }}
       />
     </div>
