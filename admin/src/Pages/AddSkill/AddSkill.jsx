@@ -43,8 +43,7 @@ const AddSkill = () => {
       setVisible("opacity-pop-up");
     }, 4000);
   }
-  console.log(skillData.category);
-  console.log(skillData.category);
+
   return (
     <div className="add-con">
       <PopUp text="Skill added" aniClass={popUp} visClass={visible} />
@@ -75,7 +74,7 @@ const AddSkill = () => {
                   <option value="Webdesign">Web Design</option>
                   <option value="FrontEnd">FrontEnd</option>
                   <option value="BackEnd">Backend</option>
-                  <option value="Tools">Tools</option>
+                  <option value="SoftSkills">SoftSkills</option>
                 </select>
               </div>
               <div className="add-label">
