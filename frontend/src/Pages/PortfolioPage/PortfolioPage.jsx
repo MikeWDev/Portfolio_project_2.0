@@ -3,14 +3,15 @@ import ProjectCard from "../../Components/ProjectCard";
 import Button from "../../Components/Button";
 import { NavLink } from "react-router-dom";
 import { PortfolioContext } from "../../Context/PortfolioContext";
+import LoadingGuy from "../../Components/LoadingGuy";
 const PortfolioPage = () => {
-  const { allProjects } = useContext(PortfolioContext);
+  const { allProjects, loading } = useContext(PortfolioContext);
   const [slicedContent, setSlicedContent] = useState([]);
   useEffect(() => {
-    const slicedArray = allProjects.slice(2);
+    const slicedArray = allProjects.slice(0, 3);
     setSlicedContent(slicedArray);
-  }, []);
-
+  }, [allProjects]);
+  console.log(allProjects);
   return (
     <section>
       <div id="portfolio" className="portfolio">
@@ -26,7 +27,10 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="project-con">
-            {slicedContent &&
+            {loading === false ? (
+              <LoadingGuy />
+            ) : (
+              slicedContent &&
               slicedContent.map((project, i) => {
                 return (
                   <ProjectCard
@@ -37,7 +41,9 @@ const PortfolioPage = () => {
                     image_url={project.image_url}
                   />
                 );
-              })}
+              })
+            )}
+            {}
           </div>
           <div className="button-con">
             <NavLink to="/all-projects">

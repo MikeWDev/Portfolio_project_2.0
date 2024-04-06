@@ -46,7 +46,7 @@ const SkillCardsSlickSlider = ({ category, setCategory }) => {
 
         <SkillCard
           active={category && category === "SoftSkills" ? "active" : " "}
-          name="Tools"
+          name="Soft skills"
           svg={<Wrench color="#fff" />}
           click={() => {
             setCategory("SoftSkills");

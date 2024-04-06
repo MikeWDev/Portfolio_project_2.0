@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import SkillBar from "./SkillBar";
 import SkillCards from "./SkillCards";
 import SkillCardsSlickSlider from "./SkillCardsSlickSlider";
@@ -36,10 +35,20 @@ const SkillPage = () => {
           </div>
           <div className="bar-con">
             <div className="bar-heading">
-              <h3>{category}</h3>
+              <h3>
+                {category === "FrontEnd"
+                  ? "Frontend"
+                  : category === "BackEnd"
+                  ? "BackEnd"
+                  : category === "Webdesign"
+                  ? "Web design"
+                  : category === "SoftSkills"
+                  ? "Soft Skills"
+                  : ""}
+              </h3>
             </div>
             <div className="bar-con">
-              {loading === true ? (
+              {loading === false ? (
                 <LoadingGuy />
               ) : (
                 selectedSkill &&

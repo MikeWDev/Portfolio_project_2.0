@@ -24,7 +24,7 @@ const AllProjects = () => {
             <div></div>
           </div>
           <div className="project-con">
-            {loading === true ? (
+            {loading === false ? (
               <LoadingGuy />
             ) : (
               allProjects &&
