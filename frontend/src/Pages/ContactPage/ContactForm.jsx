@@ -4,6 +4,7 @@ import usePopUp from "../../Hooks/usePopUp";
 import PopUp from "../../Components/PopUp";
 const ContactForm = () => {
   const { popUp, visible, setVisible, setPopUp } = usePopUp();
+  const [loading, setLoading] = useState(false);
   const [messageData, setMessageData] = useState({
     name: "",
     eMail: "",
@@ -23,7 +24,9 @@ const ContactForm = () => {
   };
 
   const sendMessage = async () => {
-    await fetch("http://localhost:3000/sendmessage", {
+    setLoading(true);
+    const baseUrl = `${import.meta.env.VITE_SERVER_URL}`;
+    await fetch(`${baseUrl}/sendmessage`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -40,6 +43,7 @@ const ContactForm = () => {
             eMail: "",
             message: "",
           });
+          setLoading(false);
         } else {
           alert("Failed");
         }
@@ -82,7 +86,8 @@ const ContactForm = () => {
       </div>
       <div className="button-con">
         <Button
-          class="primary"
+          disabled={loading}
+          class={loading && loading === true ? "primary disabled" : "primary"}
           text="Submit"
           function={() => {
             sendMessage();

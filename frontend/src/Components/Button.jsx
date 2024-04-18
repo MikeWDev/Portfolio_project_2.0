@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = (props) => {
   return (
-    <div className="button-con">
+    <div disabled={props.disabled} className="button-con">
       <button onClick={props.function} className={`${props.class}`}>
         <span></span>
         <span></span>

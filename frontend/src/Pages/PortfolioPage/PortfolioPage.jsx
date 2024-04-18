@@ -34,6 +34,7 @@ const PortfolioPage = () => {
               slicedContent.map((project, i) => {
                 return (
                   <ProjectCard
+                    skills={project.skills}
                     title={project.title}
                     desc={project.desc}
                     web_link={project.web_link}

@@ -20,6 +20,9 @@
     background-color: g.$primary;
     color: g.$fontColor;
   }
+  .primary.disabled {
+    background-color: g.$lightGray;
+  }
   .secondary {
     background-color: g.$darkGray;
     color: g.$fontColor;
