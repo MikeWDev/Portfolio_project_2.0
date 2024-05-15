@@ -1,0 +1,9 @@
+@use "../General/" as g;
+.figma-projects {
+  display: flex;
+  gap: 12.4rem;
+  flex-direction: column;
+  width: 100%;
+  @include g.glassEffectBlue();
+  padding: 4.8rem;
+}

@@ -40,6 +40,7 @@ const PortfolioPage = () => {
                     web_link={project.web_link}
                     git_link={project.git_link}
                     image_url={project.image_url}
+                    build={project.build}
                   />
                 );
               })

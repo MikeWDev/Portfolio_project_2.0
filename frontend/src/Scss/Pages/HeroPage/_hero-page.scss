@@ -11,8 +11,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    .neon-light-con {
-    }
+
     .slogans-container {
       display: flex;
       flex-direction: column;
@@ -148,6 +147,15 @@
   .home {
     grid-template-columns: 1fr;
     .content-con {
+      .slogans-container {
+        .slogans {
+          .big-slogans {
+            img {
+              display: none;
+            }
+          }
+        }
+      }
       .neonlight-con {
         .neon-light {
           &::after {
@@ -159,9 +167,6 @@
           }
         }
       }
-    }
-    .image-con {
-      display: none;
     }
   }
 }

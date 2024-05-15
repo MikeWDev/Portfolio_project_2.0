@@ -59,7 +59,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/all-projects"
+                    to="/all-projects/code"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
                     Portfolio

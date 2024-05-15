@@ -7,6 +7,59 @@
   gap: 6.4rem;
   padding-top: 9.6rem;
   padding-bottom: 9.6rem;
+  .all-p-heading {
+    display: flex;
+    width: 100%;
+    padding-bottom: 4rem;
+    h2 {
+      font-size: 5.8rem;
+      padding-left: 2rem;
+    }
+    span {
+      font-size: 5.8rem;
+      color: g.$primary;
+      font-weight: 800;
+    }
+    .figma-span {
+      padding-left: 2rem;
+      font-size: 5.8rem;
+      color: g.$primary;
+      font-weight: 800;
+    }
+    img {
+      height: 7rem;
+    }
+  }
+  .button-choice-con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    .button {
+      display: inline-block;
+      border-radius: 2rem;
+      border: 0.2rem solid transparent;
+      background: g.$borderGrad border-box;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      &.active {
+        transform: scale(1.1);
+      }
+      svg {
+        font-size: 6.2rem;
+        color: aliceblue;
+        padding: 1rem;
+        background-image: g.$bgGrad;
+        display: inline-block;
+        border-radius: 2rem;
+        text-transform: capitalize;
+        color: g.$fontColor;
+      }
+    }
+  }
   .heading-con {
     margin-bottom: 3.2rem;
     display: flex;
@@ -15,13 +68,28 @@
     justify-content: space-between;
     margin-left: 3rem;
     align-items: center;
-    .button-con {
-      button {
+
+    .button {
+      display: inline-block;
+      border-radius: 2rem;
+      border: 0.2rem solid transparent;
+      background: g.$borderGrad border-box;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      &.active {
+        transform: scale(1.1);
+      }
+      svg {
+        font-size: 6.2rem;
+        color: aliceblue;
         padding: 1rem;
-        background-color: #484848;
-        svg {
-          font-size: 3.8rem;
-        }
+        background-image: g.$bgGrad;
+        display: inline-block;
+        border-radius: 2rem;
+        text-transform: capitalize;
+        color: g.$fontColor;
       }
     }
   }

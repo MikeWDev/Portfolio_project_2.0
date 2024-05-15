@@ -1,0 +1,35 @@
+@use "../General/" as g;
+.figma-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  .figma-card-heading h4 {
+    font-size: 5.2rem;
+    color: g.$fontColor;
+    text-align: center;
+  }
+  .front-img {
+    width: 80%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .slick-slider {
+      width: 100%;
+
+      height: 100%;
+
+      .slick-arrow {
+        height: 5rem;
+        width: auto;
+      }
+      .slick-prev {
+        left: -50px;
+      }
+      .slick-next {
+        right: -50px;
+      }
+    }
+  }
+}

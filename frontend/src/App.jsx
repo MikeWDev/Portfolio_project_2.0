@@ -4,6 +4,8 @@ import MainPage from "./Pages/MainPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import AllProjectContainer from "./Components/AllProjectsComponents/AllProjectContainer";
+import AllDesignProjects from "./Components/AllProjectsComponents/AllDesignProjects";
 function App() {
   const firebaseConfig = {
     apiKey: "AIzaSyDobfliXAiUb5pCe8MSKvubTxWBtFiSdT4",
@@ -25,6 +27,16 @@ function App() {
     {
       path: "all-projects",
       element: <AllProjects />,
+      children: [
+        {
+          path: "code",
+          element: <AllProjectContainer />,
+        },
+        {
+          path: "design",
+          element: <AllDesignProjects />,
+        },
+      ],
     },
   ]);
   return (
