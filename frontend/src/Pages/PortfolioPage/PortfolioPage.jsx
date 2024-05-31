@@ -48,7 +48,7 @@ const PortfolioPage = () => {
             {}
           </div>
           <div className="button-con">
-            <NavLink to="/all-projects">
+            <NavLink to="/all-projects/code">
               <Button text="Check all projects" class="primary" />
             </NavLink>
           </div>

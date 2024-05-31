@@ -29,7 +29,7 @@ const NavSm = ({ navOpen, navOpenFunction }) => {
                 <li onClick={handleClose}>Skills</li>
               </Link>
               <NavLink
-                to="/all-projects"
+                to="/all-projects/code"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 <li>Portfolio</li>
