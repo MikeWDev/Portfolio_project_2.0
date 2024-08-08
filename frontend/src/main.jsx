@@ -10,3 +10,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </PortfolioContextProvider>
   </React.StrictMode>
 );
+("./server");
