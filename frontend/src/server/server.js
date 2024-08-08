@@ -23,30 +23,30 @@ mongoose
   .catch((err) => console.log(err));
 
 // Multer disk storage
-const storage = multer.diskStorage({
-  destination: "./upload/projectImages",
-  filename: (req, file, cb) => {
-    return cb(
-      null,
-      `${file.originalname.replace(/\.[^/.]+$/, "")}${path.extname(
-        file.originalname
-      )}`
-    );
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: "./upload/projectImages",
+//   filename: (req, file, cb) => {
+//     return cb(
+//       null,
+//       `${file.originalname.replace(/\.[^/.]+$/, "")}${path.extname(
+//         file.originalname
+//       )}`
+//     );
+//   },
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 app.use("/projectImages", express.static("upload/projectImages"));
 
-app.post("/upload", upload.single("project"), (req, res) => {
-  res.json({
-    success: 1,
-    image_url: `${functions.config().server.url}/projectImages/${
-      req.file.filename
-    }`, // Change to functions.config().server.url
-  });
-});
-
+// app.post("/upload", upload.single("project"), (req, res) => {
+//   res.json({
+//     success: 1,
+//     image_url: `${functions.config().server.url}/projectImages/${
+//       req.file.filename
+//     }`, // Change to functions.config().server.url
+//   });
+// });
+// comment
 // Routes
 app.use("/", messageRoutes);
 app.use("/", projectRoutes);
