@@ -40,7 +40,7 @@ const ProjectCard = (props) => {
         </div>
         <img className={`blur ${visibleClass}`} src={props.image_url} alt="" />
       </div>
-      ""
+
       <div className={`info-con `}>
         <div className="info">
           <div className="header-con">
